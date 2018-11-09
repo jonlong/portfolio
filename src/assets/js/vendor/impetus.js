@@ -1,3 +1,5 @@
+import { window } from 'browser-monads';
+
 const stopThresholdDefault = 0.3
 const bounceDeceleration = 0.04
 const bounceAcceleration = 0.11

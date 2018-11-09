@@ -5,6 +5,7 @@ import { modularScale } from 'polished'
 import { Post as Title } from './Heading'
 import { mq } from '../styles/utils'
 import gradients from '../styles/gradients'
+import { window, exists } from 'browser-monads';
 
 const Element = styled('div')`
   padding: ${modularScale(4)};
@@ -63,8 +64,8 @@ class Banner extends React.Component {
   }
 
   getReservedBackgrounds = () => {
-    const reserved = JSON.parse(window.sessionStorage.getItem('backgrounds'))
 
+    const reserved = exists(window) ? JSON.parse(window.sessionStorage.getItem('backgrounds')) : false;
     return reserved && reserved.length > 0 ? reserved : []
   }
 
