@@ -1,4 +1,2 @@
 User-agent: *
 Disallow: /
-Sitemap: https://portfolio.linesandwaves.com/sitemap.xml
-Host: https://portfolio.linesandwaves.com
