@@ -1,0 +1,130 @@
+---
+title: "Redd's Apple Launcher"
+link: 'https://isl.co/case-studies/redds/'
+order: 2
+background: 'red'
+overhang: true
+draft: false
+---
+
+import Gallery from 'components/Gallery'
+import GalleryItem from 'components/GalleryItem'
+import Browser from 'components/Browser'
+import Device from 'components/Device'
+import Video from 'components/Video'
+import Still from 'components/Still'
+import PostColumn from 'components/PostColumn'
+import Markdown from 'components/Markdown'
+import List from 'components/List'
+import { Element as ListItem } from 'components/ListItem'
+import Stack from 'components/Stack'
+
+import imageDesktopInterface from 'assets/images/redds/desktop/interface.jpg'
+import imageStillBTS2 from 'assets/images/redds/still/bts2.jpg'
+import imageStillSystemDiagram from 'assets/images/redds/still/system-diagram.gif'
+import imageStillUserFlow from 'assets/images/redds/still/user-flow.gif'
+import videoMP4Interface from 'assets/video/redds/interface.mp4'
+import videoWebmInterface from 'assets/video/redds/interface.webm'
+import videoMP4Trailer from 'assets/video/redds/trailer.mp4'
+import videoStillTrailer from 'assets/video/redds/trailer.jpg'
+
+<Gallery>
+  <GalleryItem>
+    <Browser>
+      <Still src={imageDesktopInterface} alt="Screenshot: The Redd's Launcher Game Interface" />
+    </Browser>
+  </GalleryItem>
+
+<GalleryItem>
+  <Video autoPlay loop>
+    <source src={videoMP4Interface} type="video/mp4" />
+    <source src={videoWebmInterface} type="video/webm" />
+  </Video>
+</GalleryItem>
+
+<GalleryItem>
+  <Video controls poster={videoStillTrailer}>
+    <source src={videoMP4Trailer} type="video/mp4" />
+  </Video>
+</GalleryItem>
+
+  <GalleryItem>
+    <Still src={imageStillBTS2} alt="Photo: Behind the scenes on the Redd's Apple Launcher set" />
+  </GalleryItem>
+</Gallery>
+
+<PostColumn>
+
+<Stack>
+  <List>
+    <ListItem>
+      <p>MEAN: Node.js, MongoDB, Express, and Angular.js (1.0)</p>
+    </ListItem>
+    <ListItem>
+      <p>Socket.io</p>
+    </ListItem>
+    <ListItem>
+      <p>3 scalable AWS instances, one Redis instance</p>
+    </ListItem>
+    <ListItem>
+      <p>Arduino MEGA (software in C)</p>
+    </ListItem>
+  </List>
+</Stack>
+
+<Markdown>
+
+Designed as a two-week viral marketing campaign, the Redd's Apple Launcher was a browser-based game featuring an internet-controlled cannon that fired "apples" (read: red hockey balls) at live targets placed throughout a fake bar in a secret warehouse in northeast DC. I know.
+
+Thousands of players competed in real time for a chance to control the cannon using an FPS-style interface on the Redd's website, while onlookers watched the action via 3 live-streaming camera feeds. If a player managed to hit one of 50 special targets throughout the bar, a switch triggered a random prize selection that was fulfilled directly in-browser, via a third party API.
+
+## My Role
+
+I led the front and backend web teams on this project, which means I was responsible for translating the strategy team's vision into a technical plan, prototyping early efforts, collaborating with internal and external stakeholders, and leading the development team through the execution.
+
+## Process
+
+Step 1: believe in yourself.<br />
+Step 2: don't die from stress.
+
+This was easily the most intense and challenging project I've ever worked on. Every step involved tools we'd never used before, at a scale we'd never experienced, using technology that didn't exist a year or two prior. All of it backed by a massive marketing campaign on an inflexible deadline.
+
+I could fill a book with the things I learned leading this project, but over time I continually return what now feels like its singular lesson: while we had no idea what the path would look like, we knew it was possible to figure it out together.
+
+Without a roadmap to guide us, we started small and built on each victory. Early prototypes graduated to production-level APIs, browser demos collected features until the entire office could compete against each other, and gameplay was adjusted until the minute the production stream began.
+
+### Hurdles
+
+Coordinating so many moving parts at once led to one of the most challenging aspects of this project — discovering fundamental limitations after having committed to our approach and the techonology powering it.
+
+Lag was a perfect example. Livestreaming partners had to be lined up early in the project's lifecycle, and our team was assured that the platform's lag time would be a couple seconds at most. After designing the gameplay accordingly, we discovered a few weeks later during testing that the actual lag time was anywhere from five seconds to a full minute, rendering weeks of work unusable.
+
+With time bearing down we couldn't afford a full refactor of the game mechanics, so the team had 24 hours to devise and test a new approach that could keep the project afloat. Working together, we devised a queue-based system, where players would position each of their shots using the existing interface, and trigger the cannon to fire them off in sequence. We padded the time between gameplay elements to keep any of the action from going too far of sync with the video, and had a working prototype running the next day.
+
+Server scalability was one of the other major challenges. Since this was designed as a viral marketing campaign, the strategy team's job was to direct as many people to the site as possible for as long as possible, which meant we needed to be prepared to scale the application for large bursts of traffic. We split the app into 4 components, each of which could be replicated across multiple servers: one in charge of the realtime event handling, one in charge of site and session logic, one in charge of the database, one in charge of ephemeral global game state.
+
+</Markdown>
+
+<Still
+  src={imageStillSystemDiagram}
+  description="TODO: Write a description"
+  alt="Diagram: System Diagram outlining the Redd's Technical Flow"
+/>
+
+<Still
+  src={imageStillUserFlow}
+  alt="Diagram: Outline of the Redd's Web User Flow"
+  description="TODO: Write a description"
+/>
+
+<Markdown>
+
+Recognizing this as an opportunity to improve our own server provisioning process, we were able to roll this internal need into the scope of a client project, which became a regular strategy in subsequent engagements.
+
+## Outcomes
+
+In my eyes, this project kickstarted a new era for iSL and defined the company's work for years afterward. Real-time interactive marketing campaigns were now possible, we had a tech workflow and infrastructure to support projects at this level, and most importantly — the team saw what we were all capable of, that it was possible for us to create something brand new by developing the skills we needed along the way.
+
+</Markdown>
+
+</PostColumn>

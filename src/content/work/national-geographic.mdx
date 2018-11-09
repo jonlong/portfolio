@@ -1,0 +1,113 @@
+---
+title: 'National Geographic'
+link: null
+order: 3
+background: 'yellow'
+overhang: true
+draft: false
+---
+
+import Gallery from 'components/Gallery'
+import GalleryItem from 'components/GalleryItem'
+import Browser from 'components/Browser'
+import Still from 'components/Still'
+import PostColumn from 'components/PostColumn'
+import Markdown from 'components/Markdown'
+import List from 'components/List'
+import { Element as ListItem } from 'components/ListItem'
+import Stack from 'components/Stack'
+
+import imageDesktopHome from 'assets/images/natgeo/desktop/home.jpg'
+import imageDesktopPOD from 'assets/images/natgeo/desktop/pod.jpg'
+import imageDesktopNews from 'assets/images/natgeo/desktop/news.jpg'
+import imageDesktopApple from 'assets/images/natgeo/desktop/apple.jpg'
+import imageDesktopLayoutManager from 'assets/images/natgeo/desktop/layoutmanager.jpg'
+import imageStillJobs from 'assets/images/natgeo/still/jobs.jpg'
+
+<Gallery>
+  <GalleryItem>
+    <Browser>
+      <Still src={imageDesktopHome} alt="Screenshot: The nationalgeographic.com homepage in 2010" />
+    </Browser>
+  </GalleryItem>
+
+<GalleryItem>
+  <Still
+    src={imageStillJobs}
+    alt="Photo: Steve Jobs visits nationalgeographic.com during the iPad keynote presentation"
+  />
+</GalleryItem>
+
+<GalleryItem>
+  <Browser>
+    <Still
+      src={imageDesktopPOD}
+      alt="Screenshot: A Photo of the Day page in 2010 "
+    />
+  </Browser>
+</GalleryItem>
+
+<GalleryItem>
+  <Browser>
+    <Still
+      src={imageDesktopApple}
+      alt="Screenshot: The nationalgeographic.com homepage featured on apple.com's iPad page"
+    />
+  </Browser>
+</GalleryItem>
+
+  <GalleryItem>
+    <Browser>
+      <Still src={imageDesktopNews} alt="Screenshot: A News page in 2010" />
+    </Browser>
+  </GalleryItem>
+</Gallery>
+
+<PostColumn>
+
+<Stack>
+  <List>
+    <ListItem>
+      <p>Django 1.0 Templating</p>
+    </ListItem>
+    <ListItem>
+      <p>jQuery</p>
+    </ListItem>
+    <ListItem>
+      <p>OOCSS-style CSS</p>
+    </ListItem>
+  </List>
+</Stack>
+
+<Markdown>
+
+In 2009, after a division-wide reorganization and with only a handful of production launches to my name, I was asked to lead the front-end development of National Geographic's upcoming site redesign.
+
+With the old site struggling under the weight of outdated standards, an expensive enterprise CMS, and a fragile deployment system, leadership set out to rebuild the entire stack in-house using open-source platforms.
+
+Over the course of a year, I worked alongside every team in the digital division to create an expressive new approach that would afford content producers freedom and flexibility in presenting their work, reduce development time for new features, dramatically increase site accessibility, and remain true to the design team's original vision.
+
+## Approach
+
+Leveraging the power of Django's template inheritance model and Nicole Sullivan's brilliant [object-oriented approach to CSS](http://www.stubbornella.org/content/2009/02/28/object-oriented-css-grids-on-github/), I created a highly modular framework capable of generating scores of different page layouts under a unified markup scheme. And prioritizing web standards compliance and progressive enhancement techniques ensured that we had a more semantic, search-friendly, and accessible site than ever before.
+
+</Markdown>
+
+<Browser description="A custom layout system I created for the site's content producers. This helped them keep pages tight and visually consistent while still ensuring a high level of customization.">
+  <Still
+    src={imageDesktopLayoutManager}
+    alt="Screenshot: A view of the custom layout manager powering the nationalgeographic.com homepage in 2010"
+  />
+</Browser>
+
+<Markdown>
+
+## Recognition
+
+- [Adweek's 2010 Magazine Site of the Year](https://www.adweek.com/brand-marketing/magazine-web-site-year-102953/)
+- [Time's 50 Best Websites of 2010](http://content.time.com/time/specials/packages/article/0,28804,2012721_2012887_2012883,00.html)
+- [Steve Jobs visits nationalgeographic.com onstage during the 2010 iPad keynote](https://youtu.be/zZtWlSDvb_k?t=873)
+
+</Markdown>
+
+</PostColumn>
