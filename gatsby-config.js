@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Default Starter',
+    siteUrl: 'portfolio.linesandwaves.com'
   },
   plugins: [
     {
@@ -14,12 +15,6 @@ module.exports = {
         display: 'minimal-ui',
         icon: 'src/assets/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
-    },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        policy: [{ userAgent: '*', disallow: ['/'] }],
-      }
     },
     {
       resolve: `gatsby-source-filesystem`,
