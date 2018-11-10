@@ -3,7 +3,7 @@ title: 'Product Development'
 link: null
 order: 3
 background: 'orange'
-overhang: false
+overhang: true
 draft: false
 ---
 
@@ -22,6 +22,31 @@ import imageStillPlanning from 'assets/images/product/still/planning.jpg'
 import imageStillV1Concept from 'assets/images/product/still/concept-v1.jpg'
 import imageStillV1Menu from 'assets/images/product/still/concept-v1-menu.jpg'
 import videoMP4Interface from 'assets/video/product/v2-demo.mp4'
+
+<Gallery>
+
+<GalleryItem>
+  <Still
+    src={imageStillPlanning}
+    alt="Photo: Collage of research conducted during product planning phases"
+  />
+</GalleryItem>
+
+<GalleryItem>
+  <Still
+    description="A hi-fidelity mockup of the first iteration's menubar interface"
+    src={imageStillV1Menu}
+    alt="Screenshot: Hi-fidelity mockup of the v1 interface"
+  />
+</GalleryItem>
+
+<GalleryItem>
+  <Video autoPlay loop muted>
+    <source src={videoMP4Interface} type="video/mp4" />
+  </Video>
+</GalleryItem>
+
+</Gallery>
 
 <PostColumn>
 
@@ -42,17 +67,6 @@ import videoMP4Interface from 'assets/video/product/v2-demo.mp4'
   </List>
 </Stack>
 
-<Browser>
-  <Video autoPlay loop muted>
-    <source src={videoMP4Interface} type="video/mp4" />
-  </Video>
-</Browser>
-
-<Still
-  src={imageStillPlanning}
-  alt="Photo: Collage of research conducted during product planning phases"
-/>
-
 <Markdown>
 
 In 2009, after a division-wide reorganization and with only a handful of production launches to my name, I was asked to lead the front-end development of National Geographic's upcoming site redesign.
@@ -71,12 +85,6 @@ Leveraging the power of Django's template inheritance model and Nicole Sullivan'
   description="Prototype walkthrough of the first product iteration."
   src={imageStillV1Concept}
   alt="Graphic: Outlined functionality of the prototype v1 interface"
-/>
-
-<Still
-  description="A hi-fidelity mockup of the first iteration's menubar interface"
-  src={imageStillV1Menu}
-  alt="Screenshot: Hi-fidelity mockup of the v1 interface"
 />
 
 <Markdown>
