@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import BaseLayout from './base'
 import Banner from '../components/Banner'
-import PostColumn from '../components/PostColumn'
 import Pagination, { Prev, Next } from '../components/Pagination'
 
 const Post = ({ data, pageContext }) => {
