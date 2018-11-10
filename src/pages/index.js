@@ -11,10 +11,11 @@ import List from '../components/List'
 import { Element as ListItem } from '../components/ListItem'
 import { Title, Subtitle, SectionTitle } from '../components/Heading'
 import {
-  CaseStudyLink,
+  CaseStudyTitle,
   CaseStudyListItem,
   CaseStudyInfo,
   CaseStudyMeta,
+  CaseStudyLink,
 } from '../components/CaseStudy'
 
 const Copy = styled('p')`
@@ -22,7 +23,7 @@ const Copy = styled('p')`
   color: ${colors.gray[2]};
 `
 
-const SectionLink = styled(CaseStudyLink)`
+const SectionLink = styled(CaseStudyTitle)`
   margin-right: ${modularScale(0)};
 
   &:hover {
@@ -37,8 +38,9 @@ const IndexPage = () => (
         <Title element="h1">Jon Long</Title>
         <Flex width={2 / 3}>
           <Subtitle element="p">
-            Creative Technologist. <br />In the past I've worked as a Designer,
-            Developer, Product Manager, and VP of Engineering.
+            Creative Technologist. <br />
+            In the past I've worked as a Designer, Developer, Product Manager,
+            and VP of Engineering.
           </Subtitle>
         </Flex>
       </Section>
@@ -48,112 +50,116 @@ const IndexPage = () => (
 
         <List>
           <CaseStudyListItem>
-            <CaseStudyMeta>
-              <CaseStudyLink to="/work/criterion">
-                The Criterion Collection
-              </CaseStudyLink>
-              <CaseStudyInfo>Website</CaseStudyInfo>
-            </CaseStudyMeta>
-            <List inline>
-              <ListItem>
-                <Badge variant="dev" />
-              </ListItem>
-            </List>
+            <CaseStudyLink to="/work/criterion">
+              <CaseStudyMeta>
+                <CaseStudyTitle>The Criterion Collection</CaseStudyTitle>
+                <CaseStudyInfo>Website</CaseStudyInfo>
+              </CaseStudyMeta>
+              <List inline>
+                <ListItem>
+                  <Badge variant="dev" />
+                </ListItem>
+              </List>
+            </CaseStudyLink>
           </CaseStudyListItem>
 
           <CaseStudyListItem>
-            <CaseStudyMeta>
-              <CaseStudyLink to="/work/remedy-plan/">
-                Remedy Plan Therapeutics
-              </CaseStudyLink>
-              <CaseStudyInfo>Website, Branding, Crowdfunding</CaseStudyInfo>
-            </CaseStudyMeta>
-            <List inline>
-              <ListItem>
-                <Badge variant="ux" />
-              </ListItem>
-              <ListItem>
-                <Badge variant="design" />
-              </ListItem>
-              <ListItem>
-                <Badge variant="dev" />
-              </ListItem>
-              <ListItem>
-                <Badge variant="lead" />
-              </ListItem>
-            </List>
+            <CaseStudyLink to="/work/remedy-plan">
+              <CaseStudyMeta>
+                <CaseStudyTitle>Remedy Plan Therapeutics</CaseStudyTitle>
+                <CaseStudyInfo>Website, Branding, Crowdfunding</CaseStudyInfo>
+              </CaseStudyMeta>
+              <List inline>
+                <ListItem>
+                  <Badge variant="ux" />
+                </ListItem>
+                <ListItem>
+                  <Badge variant="design" />
+                </ListItem>
+                <ListItem>
+                  <Badge variant="dev" />
+                </ListItem>
+                <ListItem>
+                  <Badge variant="lead" />
+                </ListItem>
+              </List>
+            </CaseStudyLink>
           </CaseStudyListItem>
 
           <CaseStudyListItem>
-            <CaseStudyMeta>
-              <CaseStudyLink to="/work/redds">
-                Redd's Apple Launcher
-              </CaseStudyLink>
-              <CaseStudyInfo>Web-based game, Connected Hardware</CaseStudyInfo>
-            </CaseStudyMeta>
-            <List inline>
-              <ListItem>
-                <Badge variant="ux" />
-              </ListItem>
-              <ListItem>
-                <Badge variant="dev" />
-              </ListItem>
-              <ListItem>
-                <Badge variant="lead" />
-              </ListItem>
-            </List>
+            <CaseStudyLink to="/work/redds">
+              <CaseStudyMeta>
+                <CaseStudyTitle>Redd's Apple Launcher</CaseStudyTitle>
+                <CaseStudyInfo>
+                  Web-based game, Connected Hardware
+                </CaseStudyInfo>
+              </CaseStudyMeta>
+              <List inline>
+                <ListItem>
+                  <Badge variant="ux" />
+                </ListItem>
+                <ListItem>
+                  <Badge variant="dev" />
+                </ListItem>
+                <ListItem>
+                  <Badge variant="lead" />
+                </ListItem>
+              </List>
+            </CaseStudyLink>
           </CaseStudyListItem>
 
           <CaseStudyListItem>
-            <CaseStudyMeta>
-              <CaseStudyLink to="/work/national-geographic">
-                National Geographic
-              </CaseStudyLink>
-              <CaseStudyInfo>Website</CaseStudyInfo>
-            </CaseStudyMeta>
-            <List inline>
-              <ListItem>
-                <Badge variant="dev" />
-              </ListItem>
-              <ListItem>
-                <Badge variant="lead" />
-              </ListItem>
-            </List>
+            <CaseStudyLink to="/work/national-geographic">
+              <CaseStudyMeta>
+                <CaseStudyTitle>National Geographic</CaseStudyTitle>
+                <CaseStudyInfo>Website</CaseStudyInfo>
+              </CaseStudyMeta>
+              <List inline>
+                <ListItem>
+                  <Badge variant="dev" />
+                </ListItem>
+                <ListItem>
+                  <Badge variant="lead" />
+                </ListItem>
+              </List>
+            </CaseStudyLink>
           </CaseStudyListItem>
 
           <CaseStudyListItem>
-            <CaseStudyMeta>
-              <CaseStudyLink to="/work/component-libraries">
-                Component Libraries
-              </CaseStudyLink>
-              <CaseStudyInfo>Living Styleguides</CaseStudyInfo>
-            </CaseStudyMeta>
-            <List inline>
-              <ListItem>
-                <Badge variant="dev" />
-              </ListItem>
-            </List>
+            <CaseStudyLink to="/work/component-libraries">
+              <CaseStudyMeta>
+                <CaseStudyTitle>Component Libraries</CaseStudyTitle>
+                <CaseStudyInfo>Living Styleguides</CaseStudyInfo>
+              </CaseStudyMeta>
+              <List inline>
+                <ListItem>
+                  <Badge variant="dev" />
+                </ListItem>
+              </List>
+            </CaseStudyLink>
           </CaseStudyListItem>
 
           <CaseStudyListItem>
-            <CaseStudyMeta>
-              <CaseStudyLink to="/page-2/">Product Development</CaseStudyLink>
-              <CaseStudyInfo>Research, Prototyping</CaseStudyInfo>
-            </CaseStudyMeta>
-            <List inline>
-              <ListItem>
-                <Badge variant="ux" />
-              </ListItem>
-              <ListItem>
-                <Badge variant="design" />
-              </ListItem>
-              <ListItem>
-                <Badge variant="dev" />
-              </ListItem>
-              <ListItem>
-                <Badge variant="lead" />
-              </ListItem>
-            </List>
+            <CaseStudyLink to="/page-2/">
+              <CaseStudyMeta>
+                <CaseStudyTitle>Product Development</CaseStudyTitle>
+                <CaseStudyInfo>Research, Prototyping</CaseStudyInfo>
+              </CaseStudyMeta>
+              <List inline>
+                <ListItem>
+                  <Badge variant="ux" />
+                </ListItem>
+                <ListItem>
+                  <Badge variant="design" />
+                </ListItem>
+                <ListItem>
+                  <Badge variant="dev" />
+                </ListItem>
+                <ListItem>
+                  <Badge variant="lead" />
+                </ListItem>
+              </List>
+            </CaseStudyLink>
           </CaseStudyListItem>
         </List>
       </Section>

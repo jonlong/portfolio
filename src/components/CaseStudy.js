@@ -1,4 +1,3 @@
-import { Box } from 'rebass'
 import styled, { css } from 'react-emotion'
 import { colors, shevy } from '../styles/settings'
 import { mq } from '../styles/utils'
@@ -6,7 +5,7 @@ import { modularScale } from 'polished'
 import Link from './Link'
 import { Element as ListItem } from './ListItem'
 
-const CaseStudyLink = styled(Link)`
+const CaseStudyTitle = styled('h3')`
   ${shevy.content};
   font-weight: 700;
   text-decoration: none;
@@ -27,11 +26,6 @@ const CaseStudyListItem = styled(ListItem)`
     margin-top: 0;
   }
 
-  ${mq.medium(css`
-    display: flex;
-    justify-content: space-between;
-  `)};
-
   &:hover {
     cursor: pointer;
     background-size: ${modularScale(1)} 100%;
@@ -47,7 +41,8 @@ const CaseStudyInfo = styled('p')`
   margin: 0;
 `
 
-const CaseStudyMeta = styled(Box)`
+const CaseStudyMeta = styled('div')`
+  display: block;
   margin-right: ${modularScale(2)};
   margin-bottom: ${modularScale(-3)};
 
@@ -56,4 +51,25 @@ const CaseStudyMeta = styled(Box)`
   `)};
 `
 
-export { CaseStudyLink, CaseStudyListItem, CaseStudyInfo, CaseStudyMeta }
+const CaseStudyLink = styled(Link)`
+  text-decoration: none;
+  display: block;
+  width: 100%;
+
+  ${mq.medium(css`
+    display: flex;
+    justify-content: space-between;
+  `)};
+
+  &:hover {
+    text-decoration: none;
+  }
+`
+
+export {
+  CaseStudyTitle,
+  CaseStudyLink,
+  CaseStudyListItem,
+  CaseStudyInfo,
+  CaseStudyMeta,
+}
