@@ -11,6 +11,8 @@ const OverflowContainer = styled(Flex)`
   margin-bottom: ${rem('-30px')};
   padding-bottom: ${rem('30px')};
   position: relative;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 
   // use hardware acceleration
   transform: translateZ(0);

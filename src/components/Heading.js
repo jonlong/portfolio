@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'react-emotion'
-import { lighten, modularScale, rem } from 'polished'
+import { lighten, modularScale } from 'polished'
 import { colors, shevy } from '../styles/settings'
 import { mq } from '../styles/utils'
 

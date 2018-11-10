@@ -13,6 +13,7 @@ export const breakpoints = {
   xLarge: 1200,
   // String values will be used as is
   caseStudyLabels: '(min-width: 650px) and (max-width: 992px)',
+  pagination: '(min-width: 650px)',
 }
 
 export const fontWeights = {
