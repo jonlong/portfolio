@@ -1,0 +1,92 @@
+---
+title: 'Product Development'
+link: null
+order: 3
+background: 'orange'
+overhang: false
+draft: false
+---
+
+import Gallery from 'components/Gallery'
+import GalleryItem from 'components/GalleryItem'
+import Browser from 'components/Browser'
+import Still from 'components/Still'
+import Video from 'components/Video'
+import PostColumn from 'components/PostColumn'
+import Markdown from 'components/Markdown'
+import List from 'components/List'
+import { Element as ListItem } from 'components/ListItem'
+import Stack from 'components/Stack'
+
+import imageStillPlanning from 'assets/images/product/still/planning.jpg'
+import imageStillV1Concept from 'assets/images/product/still/concept-v1.jpg'
+import imageStillV1Menu from 'assets/images/product/still/concept-v1-menu.jpg'
+import videoMP4Interface from 'assets/video/product/v2-demo.mp4'
+
+<PostColumn>
+
+<Stack>
+  <List>
+    <ListItem>
+      <p>Meetings, whiteboards, Google Docs, Lean Startup principles</p>
+    </ListItem>
+    <ListItem>
+      <p>Prototypes in Omnigraffle, Keynote, Sketch, After Effects</p>
+    </ListItem>
+    <ListItem>
+      <p>Meteor.js, Sails.js (Node.js, MongoDB, Socket.io)</p>
+    </ListItem>
+    <ListItem>
+      <p>Deployed with TravisCI on Nodejitsu (RIP) and MongoHQ</p>
+    </ListItem>
+  </List>
+</Stack>
+
+<Browser>
+  <Video autoPlay loop muted>
+    <source src={videoMP4Interface} type="video/mp4" />
+  </Video>
+</Browser>
+
+<Still
+  src={imageStillPlanning}
+  alt="Photo: Collage of research conducted during product planning phases"
+/>
+
+<Markdown>
+
+In 2009, after a division-wide reorganization and with only a handful of production launches to my name, I was asked to lead the front-end development of National Geographic's upcoming site redesign.
+
+With the old site struggling under the weight of outdated standards, an expensive enterprise CMS, and a fragile deployment system, leadership set out to rebuild the entire stack in-house using open-source platforms.
+
+Over the course of a year, I worked alongside every team in the digital division to create an expressive new approach that would afford content producers freedom and flexibility in presenting their work, reduce development time for new features, dramatically increase site accessibility, and remain true to the design team's original vision.
+
+## Approach
+
+Leveraging the power of Django's template inheritance model and Nicole Sullivan's brilliant [object-oriented approach to CSS](http://www.stubbornella.org/content/2009/02/28/object-oriented-css-grids-on-github/), I created a highly modular framework capable of generating scores of different page layouts under a unified markup scheme. And prioritizing web standards compliance and progressive enhancement techniques ensured that we had a more semantic, search-friendly, and accessible site than ever before.
+
+</Markdown>
+
+<Still
+  description="Prototype walkthrough of the first product iteration."
+  src={imageStillV1Concept}
+  alt="Graphic: Outlined functionality of the prototype v1 interface"
+/>
+
+<Still
+  description="A hi-fidelity mockup of the first iteration's menubar interface"
+  src={imageStillV1Menu}
+  alt="Screenshot: Hi-fidelity mockup of the v1 interface"
+/>
+
+<Markdown>
+
+## Recognition
+
+- [Adweek's 2010 Magazine Site of the Year](https://www.adweek.com/brand-marketing/magazine-web-site-year-102953/)
+- [Time's 50 Best Websites of 2010](http://content.time.com/time/specials/packages/article/0,28804,2012721_2012887_2012883,00.html)
+- [Steve Jobs visits nationalgeographic.com onstage during the 2010 iPad keynote](https://youtu.be/zZtWlSDvb_k?t=873)
+
+</Markdown>
+
+</PostColumn>

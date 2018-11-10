@@ -148,7 +148,7 @@ const IndexPage = () => (
           </CaseStudyListItem>
 
           <CaseStudyListItem>
-            <CaseStudyLink to="/page-2/">
+            <CaseStudyLink to="/work/product-development">
               <CaseStudyMeta>
                 <CaseStudyTitle>Product Development</CaseStudyTitle>
                 <CaseStudyInfo>Research, Prototyping</CaseStudyInfo>
