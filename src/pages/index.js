@@ -1,8 +1,8 @@
 import React from 'react'
-import { Flex } from 'rebass'
-import styled from 'react-emotion'
+import styled, { css } from 'react-emotion'
 import BaseLayout from '../layouts/base'
 import { colors, shevy } from '../styles/settings'
+import { mq } from '../styles/utils'
 import { modularScale } from 'polished'
 import Column from '../components/Column'
 import Section from '../components/Section'
@@ -31,18 +31,26 @@ const SectionLink = styled(CaseStudyTitle)`
   }
 `
 
+const Subhead = styled('div')`
+  display: flex;
+
+  ${mq.small(css`
+    width: 66%;
+  `)};
+`
+
 const IndexPage = () => (
   <BaseLayout>
     <Column>
       <Section>
         <Title element="h1">Jon Long</Title>
-        <Flex width={2 / 3}>
+        <Subhead>
           <Subtitle element="p">
             Creative Technologist. <br />
             In the past I've worked as a Designer, Developer, Product Manager,
             and VP of Engineering.
           </Subtitle>
-        </Flex>
+        </Subhead>
       </Section>
 
       <Section>
