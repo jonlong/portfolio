@@ -46,6 +46,7 @@ const Wrapper = styled('div')`
       width: 100%;
       border-radius: 0;
     }
+
     border: 0;
     padding: 0;
     border-radius: 0;
@@ -61,10 +62,6 @@ const Wrapper = styled('div')`
       border-color: ${colors.gray[0]};
       border-top: 0;
     }
-  }
-
-  ${Description} {
-    margin-top: ${modularScale(0)};
   }
 `
 

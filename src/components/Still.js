@@ -6,7 +6,6 @@ import PostColumn from './PostColumn'
 import Description from './Description'
 
 const Element = styled('div')`
-  font-size: ${rem('12px')};
   border-radius: ${rem('2px')};
 
   ${PostColumn} & {

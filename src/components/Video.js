@@ -1,21 +1,18 @@
 import React from 'react'
 import styled from 'react-emotion'
-import { colors } from '../styles/settings'
-import { rem } from 'polished'
+import Description from './Description'
 
 const Element = styled('div')`
-  background-color: ${colors.gray[3]};
-  border-radius: ${rem('8px')};
-  padding: ${rem('5px')} ${rem('5px')} ${rem('2px')};
-
   video {
-    border-radius: ${rem('4px')};
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    display: block;
   }
 `
 
 const Video = props => (
   <Element>
     <video {...props}>{props.children}</video>
+    {props.description && <Description>{props.description}</Description>}
   </Element>
 )
 

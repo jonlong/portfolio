@@ -1,7 +1,7 @@
 ---
 title: "Redd's Apple Launcher"
 link: 'https://isl.co/case-studies/redds/'
-order: 2
+order: 3
 background: 'red'
 overhang: true
 draft: false
@@ -31,12 +31,20 @@ import videoStillTrailer from 'assets/video/redds/trailer.jpg'
 <Gallery>
   <GalleryItem>
     <Browser>
-      <Still src={imageDesktopInterface} alt="Screenshot: The Redd's Launcher Game Interface" />
+      <Still
+        description="The in-browser game interface, where users can fire a live-streamed cannon in real time."
+        src={imageDesktopInterface}
+        alt="Screenshot: The Redd's Launcher Game Interface" />
     </Browser>
   </GalleryItem>
 
 <GalleryItem>
-  <Video autoPlay loop muted>
+  <Video
+    autoPlay
+    loop
+    muted
+    description="Players answered trivia questions for a chance to control the launcher, and then used the keyboard to position and lock in shots."
+  >
     <source src={videoMP4Interface} type="video/mp4" />
     <source src={videoWebmInterface} type="video/webm" />
   </Video>
@@ -49,7 +57,10 @@ import videoStillTrailer from 'assets/video/redds/trailer.jpg'
 </GalleryItem>
 
   <GalleryItem>
-    <Still src={imageStillBTS2} alt="Photo: Behind the scenes on the Redd's Apple Launcher set" />
+    <Still
+      src={imageStillBTS2}
+      description="Behind the scenes on the Redd's Apple Launcher set."
+      alt="Photo: Behind the scenes on the Redd's Apple Launcher set" />
   </GalleryItem>
 </Gallery>
 
@@ -76,7 +87,7 @@ import videoStillTrailer from 'assets/video/redds/trailer.jpg'
 
 Designed as a two-week viral marketing campaign, the Redd's Apple Launcher was a browser-based game featuring an internet-controlled cannon that fired "apples" (read: red hockey balls) at live targets placed throughout a fake bar in a secret warehouse in northeast DC. I know.
 
-Thousands of players competed in real time for a chance to control the cannon using an FPS-style interface on the Redd's website, while onlookers watched the action via 3 live-streaming camera feeds. If a player managed to hit one of 50 special targets throughout the bar, a switch triggered a random prize selection that was fulfilled directly in-browser, via a third party API.
+Thousands of players competed in real time for a chance to control the cannon using an FPS-style interface on the Redd's website, while onlookers watched the action via 3 live-streaming camera feeds. If a player managed to hit one of 50 special targets throughout the bar, a switch triggered a random prize selection that was fulfilled directly in-browser via a third party API.
 
 ## My Role
 
@@ -84,12 +95,9 @@ I led the front and backend web teams on this project, which means I was respons
 
 ## Process
 
-Step 1: believe in yourself.<br />
-Step 2: don't die from stress.
-
 This was easily the most intense and challenging project I've ever worked on. Every step involved tools we'd never used before, at a scale we'd never experienced, using technology that didn't exist a year or two prior. All of it backed by a massive marketing campaign on an inflexible deadline.
 
-I could fill a book with the things I learned leading this project, but over time I continually return what now feels like its singular lesson: while we had no idea what the path would look like, we knew it was possible to figure it out together.
+I could fill a book with the things I learned leading this project, but over time I continually return to what now feels like its singular lesson: while we had no idea what the path would look like, we knew it was possible to figure it out together.
 
 Without a roadmap to guide us, we started small and built on each victory. Early prototypes graduated to production-level APIs, browser demos collected features until the entire office could compete against each other, and gameplay was adjusted until the minute the production stream began.
 
@@ -97,33 +105,39 @@ Without a roadmap to guide us, we started small and built on each victory. Early
 
 Coordinating so many moving parts at once led to one of the most challenging aspects of this project — discovering fundamental limitations after having committed to our approach and the techonology powering it.
 
-Lag was a perfect example. Livestreaming partners had to be lined up early in the project's lifecycle, and our team was assured that the platform's lag time would be a couple seconds at most. After designing the gameplay accordingly, we discovered a few weeks later during testing that the actual lag time was anywhere from five seconds to a full minute, rendering weeks of work unusable.
+Lag was a prime example. Livestreaming partners had to be lined up early in the project's lifecycle, and our team was assured that the platform's lag time would be a couple seconds at most. After designing the gameplay accordingly, we discovered a few weeks later during testing that the actual lag time was anywhere from five seconds to a full minute, instantly rendering weeks of work unusable.
 
-With time bearing down we couldn't afford a full refactor of the game mechanics, so the team had 24 hours to devise and test a new approach that could keep the project afloat. Working together, we devised a queue-based system, where players would position each of their shots using the existing interface, and trigger the cannon to fire them off in sequence. We padded the time between gameplay elements to keep any of the action from going too far of sync with the video, and had a working prototype running the next day.
+With time bearing down we couldn't afford a full refactor of the game mechanics, so the team had 24 hours to devise and test a new approach that could keep the project afloat. Huddled together, we devised a queue-based system, where players would position each of their shots using the existing interface, and trigger the cannon to fire them off in sequence. We padded the time between gameplay elements to keep any of the action from going too far of sync with the video, and had a working prototype running the next day.
 
-Server scalability was one of the other major challenges. Since this was designed as a viral marketing campaign, the strategy team's job was to direct as many people to the site as possible for as long as possible, which meant we needed to be prepared to scale the application for large bursts of traffic. We split the app into 4 components, each of which could be replicated across multiple servers: one in charge of the realtime event handling, one in charge of site and session logic, one in charge of the database, one in charge of ephemeral global game state.
+</Markdown>
+
+<Still
+  src={imageStillUserFlow}
+  alt="Diagram: Outline of the Redd's Web User Flow"
+  description="A technical outline of the user flow for the web interface, divided into Player vs. Visitor flows."
+/>
+
+<Markdown>
+
+Server scalability was another major challenge. Since this was designed as a viral marketing campaign, the strategy team's job was to direct as many people to the site as possible for as long as possible, which meant we needed to be prepared to scale the application for large, sustained bursts of traffic.
+
+We split the app into 4 components, each of which could be replicated across multiple servers: one in charge of the realtime event handling, one in charge of site and session logic, one in charge of the database, one in charge of ephemeral global game state.
+
+Recognizing this as an opportunity to improve our own server provisioning process, we were able to roll this internal need into the scope of a client project, which became a regular strategy in subsequent engagements.
 
 </Markdown>
 
 <Still
   src={imageStillSystemDiagram}
-  description="TODO: Write a description"
-  alt="Diagram: System Diagram outlining the Redd's Technical Flow"
-/>
-
-<Still
-  src={imageStillUserFlow}
-  alt="Diagram: Outline of the Redd's Web User Flow"
-  description="TODO: Write a description"
+  description="A system diagram for the Redd's tech stack, detailing how each component communicates with one another"
+  alt="Diagram: System Diagram outlining the Redd's Technical Flow."
 />
 
 <Markdown>
 
-Recognizing this as an opportunity to improve our own server provisioning process, we were able to roll this internal need into the scope of a client project, which became a regular strategy in subsequent engagements.
-
 ## Outcomes
 
-In my eyes, this project kickstarted a new era for iSL and defined the company's work for years afterward. Real-time interactive marketing campaigns were now possible, we had a tech workflow and infrastructure to support projects at this level, and most importantly — the team saw what we were all capable of, that it was possible for us to create something brand new by developing the skills we needed along the way.
+This project kickstarted a new era for iSL and defined the company's work for years afterward. Real-time interactive marketing campaigns were suddenly possible, we had a tech workflow and infrastructure to support projects at an enormous scale, and most importantly — the team saw just how capable we were together, and that it was possible for us to create something brand new by developing the skills we needed along the way.
 
 </Markdown>
 

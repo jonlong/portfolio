@@ -1,7 +1,7 @@
 ---
 title: 'National Geographic'
 link: null
-order: 3
+order: 4
 background: 'yellow'
 overhang: true
 draft: false
@@ -26,13 +26,14 @@ import imageStillJobs from 'assets/images/natgeo/still/jobs.jpg'
 
 <Gallery>
   <GalleryItem>
-    <Browser>
+    <Browser description="The National Geographic homepage, seen on the day we launched the new design, in December 2009.">
       <Still src={imageDesktopHome} alt="Screenshot: The nationalgeographic.com homepage in 2010" />
     </Browser>
   </GalleryItem>
 
 <GalleryItem>
   <Still
+    description="Steve Jobs demos nationalgeographic.com onstage during the iPad keynote presentation."
     src={imageStillJobs}
     alt="Photo: Steve Jobs visits nationalgeographic.com during the iPad keynote presentation"
   />
@@ -50,6 +51,7 @@ import imageStillJobs from 'assets/images/natgeo/still/jobs.jpg'
 <GalleryItem>
   <Browser>
     <Still
+      description="Featured on apple.com's iPad product page."
       src={imageDesktopApple}
       alt="Screenshot: The nationalgeographic.com homepage featured on apple.com's iPad page"
     />
@@ -58,7 +60,9 @@ import imageStillJobs from 'assets/images/natgeo/still/jobs.jpg'
 
   <GalleryItem>
     <Browser>
-      <Still src={imageDesktopNews} alt="Screenshot: A News page in 2010" />
+      <Still
+        src={imageDesktopNews}
+        alt="Screenshot: A News page in 2010" />
     </Browser>
   </GalleryItem>
 </Gallery>

@@ -13,6 +13,7 @@ import GalleryItem from 'components/GalleryItem'
 import Browser from 'components/Browser'
 import Device from 'components/Device'
 import Still from 'components/Still'
+import Video from 'components/Video'
 import PostColumn from 'components/PostColumn'
 import Markdown from 'components/Markdown'
 import List from 'components/List'
@@ -26,6 +27,7 @@ import imageDesktopCollection from 'assets/images/criterion/desktop/collection.j
 import imageDesktopFlashSale from 'assets/images/criterion/desktop/flash-sale.jpg'
 import imageMobileHome from 'assets/images/criterion/mobile/home.jpg'
 import imageMobileArticle from 'assets/images/criterion/mobile/article.jpg'
+import videoMP4Slideshow from 'assets/video/criterion/slideshow.mp4'
 
 <Gallery>
   <GalleryItem>
@@ -43,6 +45,14 @@ import imageMobileArticle from 'assets/images/criterion/mobile/article.jpg'
 <GalleryItem>
   <Browser>
     <Still src={imageDesktopFilm} alt="Screenshot: Desktop Film Page" />
+  </Browser>
+</GalleryItem>
+
+<GalleryItem>
+  <Browser>
+    <Video autoPlay loop muted>
+      <source src={videoMP4Slideshow} type="video/mp4" />
+    </Video>
   </Browser>
 </GalleryItem>
 
@@ -111,7 +121,7 @@ In addition, I've shipped features over the last year including homepage CMS int
 
 </Markdown>
 
-<Browser description="TODO: Write a description">
+<Browser description="A partial view of Criterion's Flash Sale page. This event is held twice a year and drives huge bursts of traffic to the site for 24 hours at a time.">
   <Still
     src={imageDesktopFlashSale}
     alt="Screenshot: 24-Hour Flash Sale page"
@@ -120,7 +130,7 @@ In addition, I've shipped features over the last year including homepage CMS int
 
 <Markdown>
 
-  ## Trusting the Process
+## Trusting the Process
 
 While we've had our fair share of tricky technical puzzles, the heart of this project has been the team's effort to radically improve transparency and communication with the client stakeholders, something that was especially crucial given our role as the second development team to join the project.
 

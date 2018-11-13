@@ -27,18 +27,24 @@ const Element = styled('div')`
     }
   }
 
+  ${Video} {
+    img, video {
+      height: calc(${galleryBaseHeight} + 13px);
+    }
+  }
+
   ${Window} {
     img {
       height: calc(${galleryBaseHeight} - 12px);
     }
-  }
 
-  ${Video} {
-    img, video {
-      height: calc(${galleryBaseHeight} + 3px);
+    ${Video} {
+      video {
+        width: auto;
+        height: calc(${galleryBaseHeight} - 13px);
+      }
     }
   }
-
 
   ${Window}, ${Video}, ${Still} {
     img,
