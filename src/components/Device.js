@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Device = ({ children }) => (
   <div className="device device-iphone-8 device-gray">
@@ -10,5 +11,9 @@ const Device = ({ children }) => (
     <div className="device-power" />
   </div>
 )
+
+Device.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 export default Device

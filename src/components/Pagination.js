@@ -64,6 +64,14 @@ Pagination.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
+Next.propTypes = {
+  background: PropTypes.string,
+}
+
+Prev.propTypes = {
+  background: PropTypes.string,
+}
+
 export default Pagination
 
 export { Pager, Next, Prev }

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled, { css } from 'react-emotion'
 import { lighten, modularScale } from 'polished'
 import { colors, shevy } from '../styles/settings'
@@ -57,5 +58,10 @@ const SectionTitle = styled(Base)`
   border-bottom: 1px solid ${lighten(0.6, colors.gray[2])};
   padding-bottom: ${shevy.baseSpacing(0.25)};
 `
+
+Base.propTypes = {
+  children: PropTypes.node.isRequired,
+  element: PropTypes.string.isRequired
+}
 
 export { Post, Title, Subtitle, TertiaryTitle, SectionTitle }

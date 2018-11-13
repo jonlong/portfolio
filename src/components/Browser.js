@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled, { css } from 'react-emotion'
 import { colors } from '../styles/settings'
 import inlineImage from '../styles/inlineImage'
-import { lighten, rem, modularScale } from 'polished'
+import { lighten, rem } from 'polished'
 import { Element as Still } from './Still'
 import { Element as Video } from './Video'
 import Description from './Description'
@@ -78,6 +79,15 @@ const Browser = ({ children, description }) => (
     {description && <Description>{description}</Description>}
   </Wrapper>
 )
+
+Browser.propTypes = {
+  children: PropTypes.node.isRequired,
+  description: PropTypes.string
+}
+
+Control.propTypes = {
+  variant: PropTypes.string
+}
 
 export default Browser
 

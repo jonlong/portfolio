@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { css } from 'react-emotion'
 import { Link as GatsbyLink } from 'gatsby'
 import { colors } from '../styles/settings'
@@ -25,6 +26,11 @@ const Link = ({ children, to, ...other }) => {
       {children}
     </GatsbyLink>
   )
+}
+
+Link.propTypes = {
+  children: PropTypes.node.isRequired,
+  to: PropTypes.string.isRequired
 }
 
 export default Link

@@ -98,6 +98,7 @@ class Banner extends React.Component {
 Banner.propTypes = {
   title: PropTypes.string.isRequired,
   overhang: PropTypes.bool,
+  background: PropTypes.string,
 }
 
 export default Banner

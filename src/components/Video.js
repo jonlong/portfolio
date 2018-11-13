@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'react-emotion'
 import Description from './Description'
 
@@ -15,6 +16,11 @@ const Video = props => (
     {props.description && <Description>{props.description}</Description>}
   </Element>
 )
+
+Video.propTypes = {
+  children: PropTypes.node.isRequired,
+  description: PropTypes.string
+}
 
 export default Video
 
