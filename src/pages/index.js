@@ -181,13 +181,7 @@ const IndexPage = () => (
         <Copy>
           I’m a technologist specializing in front-end engineering, and have
           worked with organizations at many different scales, from small
-          agencies, to large publishing organizations, to Fortune 500s. From
-          management to client to design and development, I've been on every
-          side of the equation. I’ve led front-end and full stack engineering
-          portions of projects with seven-figure budgets, and have planned and
-          built solutions for some of the largest brands and companies in the
-          world. and throughout my career I've focused on lean, proven solutions
-          that reject vendor lock-in and embrace open development standards.
+          agencies, to large publishing organizations, to Fortune 500s.
         </Copy>
         <Copy>
           From management to client to design and development, I've been on
@@ -200,7 +194,7 @@ const IndexPage = () => (
         </Copy>
 
         <Copy>
-          In my spare time I hang out with my wife and{' '}
+          In my spare time I spend time with my wife and{' '}
           <Link to="https://www.instagram.com/p/BpVsAIah12Y/">
             our little dog Hugo
           </Link>
