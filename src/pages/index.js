@@ -8,6 +8,7 @@ import Column from '../components/Column'
 import Section from '../components/Section'
 import Badge from '../components/Badge'
 import List from '../components/List'
+import Link from '../components/Link'
 import { Element as ListItem } from '../components/ListItem'
 import { Title, Subtitle, SectionTitle } from '../components/Heading'
 import {
@@ -23,8 +24,11 @@ const Copy = styled('p')`
   color: ${colors.gray[2]};
 `
 
-const SectionLink = styled(CaseStudyTitle)`
-  margin-right: ${modularScale(0)};
+const SectionLink = styled(Link)`
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0 ${modularScale(0)} 0 0;
+  color: ${colors.gray[2]};
 
   &:hover {
     box-shadow: 0 ${modularScale(-5)} 0 0 ${colors.blue};
@@ -175,17 +179,33 @@ const IndexPage = () => (
       <Section>
         <SectionTitle element="h2">About Me</SectionTitle>
         <Copy>
-          I’ve worked in large publishing organizations and small agencies. I’ve
-          led front-end and full stack engineering portions of projects with
-          budgets in the millions. I’ve been on every side of the equation, from
-          management to client to design and development, and have planned and
+          I’m a technologist specializing in front-end engineering, and have
+          worked with organizations at many different scales, from small
+          agencies, to large publishing organizations, to Fortune 500s. From
+          management to client to design and development, I've been on every
+          side of the equation. I’ve led front-end and full stack engineering
+          portions of projects with seven-figure budgets, and have planned and
           built solutions for some of the largest brands and companies in the
-          world.
+          world. and throughout my career I've focused on lean, proven solutions
+          that reject vendor lock-in and embrace open development standards.
+        </Copy>
+        <Copy>
+          From management to client to design and development, I've been on
+          every side of the equation.
+        </Copy>
+        <Copy>
+          I’ve led front-end and full stack engineering portions of projects
+          with seven-figure budgets, and have planned and built solutions for
+          some of the largest brands and companies in the world.
         </Copy>
 
         <Copy>
-          In my spare time I play pinball, make music, and founded and and run
-          the Philly Pinball Club.
+          In my spare time I hang out with my wife and{' '}
+          <Link to="https://www.instagram.com/p/BpVsAIah12Y/">
+            our little dog Hugo
+          </Link>
+          , make music, and run the{' '}
+          <Link to="https://phillypinball.club/">Philly Pinball Club</Link>.
         </Copy>
       </Section>
 

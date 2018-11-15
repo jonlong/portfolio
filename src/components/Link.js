@@ -7,6 +7,11 @@ import { colors } from '../styles/settings'
 const styles = css`
   color: ${colors.blue};
   text-decoration: none;
+
+  &:visited {
+    color: ${colors.darkblue};
+    text-decoration: none;
+  }
 `
 
 const Link = ({ children, to, ...other }) => {

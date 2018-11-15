@@ -3,12 +3,10 @@ title: 'Product Development'
 link: null
 order: 6
 background: 'orange'
-overhang: true
+overhang: false
 draft: false
 ---
 
-import Gallery from 'components/Gallery'
-import GalleryItem from 'components/GalleryItem'
 import Browser from 'components/Browser'
 import Still from 'components/Still'
 import Video from 'components/Video'
@@ -23,37 +21,6 @@ import imageStillPlanning from 'assets/images/product/still/planning.jpg'
 import imageStillV1Concept from 'assets/images/product/still/concept-v1.jpg'
 import imageStillV1Menu from 'assets/images/product/still/concept-v1-menu.jpg'
 import videoMP4Interface from 'assets/video/product/v2-demo.mp4'
-
-<Gallery>
-
-<GalleryItem>
-  <Still
-    description="Research materials generated during product planning phases"
-    src={imageStillPlanning}
-    alt="Photo: Collage of research conducted during product planning phases"
-  />
-</GalleryItem>
-
-<GalleryItem>
-  <Still
-    description="A hi-fidelity mockup of the first product iteration's menubar interface"
-    src={imageStillV1Menu}
-    alt="Screenshot: Hi-fidelity mockup of the v1 interface"
-  />
-</GalleryItem>
-
-<GalleryItem>
-  <Video
-    autoPlay
-    loop
-    muted
-    description="An animated mockup of the second iteration, demoing interactions"
-  >
-    <source src={videoMP4Interface} type="video/mp4" />
-  </Video>
-</GalleryItem>
-
-</Gallery>
 
 <PostColumn>
 
@@ -79,15 +46,25 @@ import videoMP4Interface from 'assets/video/product/v2-demo.mp4'
 
 <Markdown>
 
-In 2009, after a division-wide reorganization and with only a handful of production launches to my name, I was asked to lead the front-end development of National Geographic's upcoming site redesign.
+Between 2014 and 2015 I led a newly-established Product Development team at <Link to="https://isl.co/">ISL</Link>, with the goal of building marketable tools to better understand workload and project status across teams.
 
-With the old site struggling under the weight of outdated standards, an expensive enterprise CMS, and a fragile deployment system, leadership set out to rebuild the entire stack in-house using open-source platforms.
+Feeling constrained by traditional time tracking approaches, and struggling to adopt a unified system for reporting, we were looking to find a way to collect better data about everyone's workload without making the reporting process feel like a chore.
 
-Over the course of a year, I worked alongside every team in the digital division to create an expressive new approach that would afford content producers freedom and flexibility in presenting their work, reduce development time for new features, dramatically increase site accessibility, and remain true to the design team's original vision.
+## Problem Identification and User Research
 
-## Approach
+The first phase of our product development cycle was centered around clearly defining and validating our problem through user research. Working within a <Link to="http://theleanstartup.com/">Lean Startup</Link> methodology, we conducted extensive interviews across each team, uncovering personal workflows and pain points for both employees and managers. We used this data to identify the reasons why our current tools were failing and define success factors for our own work.
 
-Leveraging the power of Django's template inheritance model and Nicole Sullivan's brilliant [object-oriented approach to CSS](http://www.stubbornella.org/content/2009/02/28/object-oriented-css-grids-on-github/), I created a highly modular framework capable of generating scores of different page layouts under a unified markup scheme. And prioritizing web standards compliance and progressive enhancement techniques ensured that we had a more semantic, search-friendly, and accessible site than ever before.
+</Markdown>
+
+<Still
+  description="Research materials generated during product planning phases"
+  src={imageStillPlanning}
+  alt="Photo: Collage of research conducted during product planning phases"
+/>
+
+<Markdown>
+
+With this data in hand, we created lo-fidelity prototypes to kickstart a _build-measure-learn_ feedback loop with our colleagues, with the goal of validating the assumptions and success factors we developed prior.
 
 </Markdown>
 
@@ -99,11 +76,45 @@ Leveraging the power of Django's template inheritance model and Nicole Sullivan'
 
 <Markdown>
 
-## Recognition
+## MVP Development
 
-- [Adweek's 2010 Magazine Site of the Year](https://www.adweek.com/brand-marketing/magazine-web-site-year-102953/)
-- [Time's 50 Best Websites of 2010](http://content.time.com/time/specials/packages/article/0,28804,2012721_2012887_2012883,00.html)
-- [Steve Jobs visits nationalgeographic.com onstage during the 2010 iPad keynote](https://youtu.be/zZtWlSDvb_k?t=873)
+Once we were confident that we had a thorough understanding of the problem, the user base, and an initial product vision, we pitched company stakeholders on the idea of investing in a minimum viable product.
+
+</Markdown>
+
+<Still
+  description="A hi-fidelity mockup of the first product iteration's menubar interface"
+  src={imageStillV1Menu}
+  alt="Screenshot: Hi-fidelity mockup of the v1 interface"
+/>
+
+<Markdown>
+
+Following unanimous approval, a small team was assembled and we began building a lightweight data-collection API alongside a series of static interface mockups designed to quickly test interactive models with colleagues.
+
+</Markdown>
+
+<Browser>
+  <Video
+    autoPlay
+    loop
+    muted
+    description="An animated mockup of the second iteration, demoing interactions"
+  >
+    <source src={videoMP4Interface} type="video/mp4" />
+  </Video>
+</Browser>
+
+<Markdown>
+
+## Sunset
+
+Unfortunately, the product team's progress was cut short, as the explosive growth of the company's client services required internal resources to shift focus indefinitely. Nonetheless, this was an invaluable experience, and one from which we took many lessons:
+
+- We were validated early on by our peers (including successful product devs), who supported and encouraged our decision to use an internal accelerator as a product development model.
+- Early course-correction was a frequent occurrence—we set our own expectations around the volatile nature of early product work, and we didn't hesistate to tear down and pursue new directions when necessary.
+- The ideas that came out of a rigorous research process routinely won support over those that didn't. We proved to ourselves that deep understanding of a problem space resulted in our strongest thinking, and we tested that idea through pitches, focus groups, and anonymous feedback.
+- Momentum was both the most powerful and the most underestimated force we encountered. When we had momentum, we did our best work, shipped quickly, and stayed excited, but when we lost momentum, faith in the product team suffered.
 
 </Markdown>
 

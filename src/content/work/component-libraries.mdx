@@ -57,7 +57,11 @@ import videoStillTrailer from 'assets/video/redds/trailer.jpg'
 
 <Markdown>
 
-Designed as a two-week viral marketing campaign, the Redd's Apple Launcher was a browser-based game featuring an internet-controlled cannon that fired "apples" (read: red hockey balls) at live targets placed throughout a fake bar in a secret warehouse in northeast DC. I know.
+I've been excited to see the rise of component libraries and styleguides in web app development over the last few years, and have especially started to see their dividends in recent projects requiring design systems as deliverables.
+
+I built the components above with the <Link to="https://fractal.build">Fractal</Link> library, which created an incredibly smooth and consistent QA experience for both myself and the design team. I was able to develop and test each of the components in isolation first, and then pass the interactive versions to the designers for a more focused review. Building this way also encouraged a taking more modular approach from the start, and each component was created using Nunjucks template partials, BEM naming conventions, and ES6 modules.
+
+I've found this approach so productive and valuable that I've adopted it as a standard step in my own site design and development.
 
 </Markdown>
 
@@ -83,6 +87,14 @@ Designed as a two-week viral marketing campaign, the Redd's Apple Launcher was a
   </List>
 </Stack>
 
+<Markdown>
+
+For sites with less complex components and more static design elements, living styleguides are a nice middle ground. The examples below are taken from two recent projects, and were the first things I built for each.
+
+Once these libraries were complete, full templates were assembled Bootstrap-style, using the markup patterns in the styleguide.
+
+</Markdown>
+
 <Browser description="A responsive, living styleguide created for Roxborough, Philadelphia">
   <Still
     src={imageDesktopRoxborough}
@@ -96,11 +108,5 @@ Designed as a two-week viral marketing campaign, the Redd's Apple Launcher was a
     alt="Screenshot: A living styleguide for The Green Program"
   />
 </Browser>
-
-<Markdown>
-
-Designed as a two-week viral marketing campaign, the Redd's Apple Launcher was a browser-based game featuring an internet-controlled cannon that fired "apples" (read: red hockey balls) at live targets placed throughout a fake bar in a secret warehouse in northeast DC. I know.
-
-</Markdown>
 
 </PostColumn>
