@@ -179,18 +179,15 @@ const IndexPage = () => (
       <Section>
         <SectionTitle element="h2">About Me</SectionTitle>
         <Copy>
-          I’m a technologist specializing in front-end engineering, and have
-          worked with organizations at many different scales, from small
-          agencies, to large publishing organizations, to Fortune 500s.
-        </Copy>
-        <Copy>
-          From management to client to design and development, I've been on
-          every side of the equation.
+          I’m a technologist specializing in front-end engineering. I’ve worked
+          with a wide range of clients from small agencies, to large publishing
+          organizations, to Fortune 500s. From management to client to design
+          and development, I’ve been on every side of the equation.
         </Copy>
         <Copy>
           I’ve led front-end and full stack engineering portions of projects
-          with seven-figure budgets, and have planned and built solutions for
-          some of the largest brands and companies in the world.
+          with seven-figure budgets, and planned and built solutions for some of
+          the largest brands and companies in the world.
         </Copy>
 
         <Copy>
