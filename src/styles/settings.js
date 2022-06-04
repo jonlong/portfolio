@@ -31,7 +31,7 @@ export const layout = {
 
 export const colors = {
   red: '#fa1955',
-  orange: '#E6B89C',
+  orange: '#FF7F21',
   yellow: '#f6d000',
   green: '#009f6a',
   blue: '#509afc',
