@@ -1,7 +1,7 @@
 ---
-title: 'Component Libraries'
+title: 'Design Systems'
 link: null
-order: 5
+order: 2
 background: 'purple'
 overhang: false
 draft: false
@@ -20,10 +20,9 @@ import { Element as ListItem } from 'components/ListItem'
 import Stack from 'components/Stack'
 import Link from 'components/Link'
 
-import imageDesktopRoxborough from 'assets/images/component-libraries/desktop/roxborough.jpg'
-import imageDesktopGreenProgram from 'assets/images/component-libraries/desktop/greenprogram.jpg'
-import videoMP4Integrity from 'assets/video/component-libraries/integrity-small.mp4'
-import videoStillTrailer from 'assets/video/redds/trailer.jpg'
+import imageDesktopDSRoxborough from 'assets/images/design-systems/desktop/roxborough.jpg'
+import imageDesktopDSGreenProgram from 'assets/images/design-systems/desktop/greenprogram.jpg'
+import videoDSMP4Integrity from 'assets/video/design-systems/integrity-small.mp4'
 
 <PostColumn>
 
@@ -51,7 +50,7 @@ import videoStillTrailer from 'assets/video/redds/trailer.jpg'
 
 <Browser>
   <Video autoPlay loop muted>
-    <source src={videoMP4Integrity} type="video/mp4" />
+    <source src={videoDSMP4Integrity} type="video/mp4" />
   </Video>
 </Browser>
 
@@ -97,14 +96,14 @@ Once these libraries were complete, full templates were assembled Bootstrap-styl
 
 <Browser description="A responsive, living styleguide created for Roxborough, Philadelphia">
   <Still
-    src={imageDesktopRoxborough}
+    src={imageDesktopDSRoxborough}
     alt="Screenshot: A living styleguide for Roxborough, Philadelphia"
   />
 </Browser>
 
 <Browser description="A responsive, living styleguide created for The Green Program">
   <Still
-    src={imageDesktopGreenProgram}
+    src={imageDesktopDSGreenProgram}
     alt="Screenshot: A living styleguide for The Green Program"
   />
 </Browser>

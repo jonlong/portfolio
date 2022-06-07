@@ -45,9 +45,7 @@ const IndexPage = () => (
       <Section>
         <Title element="h1">Jon Long</Title>
         <Subhead>
-          <Subtitle element="p">
-            UI Developer and Tech Lead
-          </Subtitle>
+          <Subtitle element="p">UI Developer and Tech Lead</Subtitle>
         </Subhead>
       </Section>
 
@@ -70,6 +68,23 @@ const IndexPage = () => (
           </CaseStudyListItem>
 
           <CaseStudyListItem>
+            <CaseStudyLink to="/work/design-systems">
+              <CaseStudyMeta>
+                <CaseStudyTitle>Design Systems</CaseStudyTitle>
+                <CaseStudyInfo>Component Libraries and Styleguides</CaseStudyInfo>
+              </CaseStudyMeta>
+              <List inline>
+                <ListItem>
+                  <Badge variant="lead" />
+                </ListItem>
+                <ListItem>
+                  <Badge variant="dev" />
+                </ListItem>
+              </List>
+            </CaseStudyLink>
+          </CaseStudyListItem>
+
+          <CaseStudyListItem>
             <CaseStudyLink to="/work/remedy-plan">
               <CaseStudyMeta>
                 <CaseStudyTitle>Remedy Plan Therapeutics</CaseStudyTitle>
@@ -77,16 +92,16 @@ const IndexPage = () => (
               </CaseStudyMeta>
               <List inline>
                 <ListItem>
-                  <Badge variant="ux" />
-                </ListItem>
-                <ListItem>
                   <Badge variant="design" />
                 </ListItem>
                 <ListItem>
-                  <Badge variant="dev" />
+                  <Badge variant="ux" />
                 </ListItem>
                 <ListItem>
                   <Badge variant="lead" />
+                </ListItem>
+                <ListItem>
+                  <Badge variant="dev" />
                 </ListItem>
               </List>
             </CaseStudyLink>
@@ -105,10 +120,10 @@ const IndexPage = () => (
                   <Badge variant="ux" />
                 </ListItem>
                 <ListItem>
-                  <Badge variant="dev" />
+                  <Badge variant="lead" />
                 </ListItem>
                 <ListItem>
-                  <Badge variant="lead" />
+                  <Badge variant="dev" />
                 </ListItem>
               </List>
             </CaseStudyLink>
@@ -122,22 +137,8 @@ const IndexPage = () => (
               </CaseStudyMeta>
               <List inline>
                 <ListItem>
-                  <Badge variant="dev" />
-                </ListItem>
-                <ListItem>
                   <Badge variant="lead" />
                 </ListItem>
-              </List>
-            </CaseStudyLink>
-          </CaseStudyListItem>
-
-          <CaseStudyListItem>
-            <CaseStudyLink to="/work/component-libraries">
-              <CaseStudyMeta>
-                <CaseStudyTitle>Component Libraries</CaseStudyTitle>
-                <CaseStudyInfo>Living Styleguides</CaseStudyInfo>
-              </CaseStudyMeta>
-              <List inline>
                 <ListItem>
                   <Badge variant="dev" />
                 </ListItem>
@@ -153,16 +154,16 @@ const IndexPage = () => (
               </CaseStudyMeta>
               <List inline>
                 <ListItem>
-                  <Badge variant="ux" />
-                </ListItem>
-                <ListItem>
                   <Badge variant="design" />
                 </ListItem>
                 <ListItem>
-                  <Badge variant="dev" />
+                  <Badge variant="ux" />
                 </ListItem>
                 <ListItem>
                   <Badge variant="lead" />
+                </ListItem>
+                <ListItem>
+                  <Badge variant="dev" />
                 </ListItem>
               </List>
             </CaseStudyLink>
@@ -179,7 +180,7 @@ const IndexPage = () => (
             </SectionLink>
           </ListItem>
           <ListItem>
-            <SectionLink to="https://github.com/jonlong">Github</SectionLink>
+            <SectionLink to="https://github.com/jonlong">GitHub</SectionLink>
           </ListItem>
         </List>
       </Section>
