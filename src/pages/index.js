@@ -1,7 +1,8 @@
 import React from 'react'
-import styled, { css } from 'react-emotion'
+import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 import BaseLayout from '../layouts/base'
-import { colors, shevy } from '../styles/settings'
+import { colors } from '../styles/settings'
 import { mq } from '../styles/utils'
 import { modularScale } from 'polished'
 import Column from '../components/Column'
@@ -18,11 +19,6 @@ import {
   CaseStudyMeta,
   CaseStudyLink,
 } from '../components/CaseStudy'
-
-const Copy = styled('p')`
-  ${shevy.content};
-  color: ${colors.gray[2]};
-`
 
 const SectionLink = styled(Link)`
   font-weight: 700;

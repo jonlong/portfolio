@@ -1,4 +1,4 @@
-import { css } from 'react-emotion'
+import { css } from '@emotion/core'
 import { em } from 'polished'
 import { galleryBaseHeight, galleryScale, colors } from './settings'
 

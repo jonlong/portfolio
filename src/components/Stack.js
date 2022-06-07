@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { modularScale, rem } from 'polished'
 import { layout, colors, shevy } from '../styles/settings'
 import { Element as ListItem } from './ListItem'

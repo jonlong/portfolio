@@ -1,7 +1,6 @@
 const path = require('path')
 const _ = require('lodash')
 const { createFilePath } = require('gatsby-source-filesystem')
-const componentWithMDXScope = require('gatsby-mdx/component-with-mdx-scope')
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -50,9 +49,6 @@ exports.createPages = ({ actions, graphql }) => {
                   overhang
                   background
                 }
-                code {
-                  scope
-                }
               }
             }
           }
@@ -82,7 +78,7 @@ exports.createPages = ({ actions, graphql }) => {
 
           createPage({
             path: node.fields.slug,
-            component: componentWithMDXScope(postTemplate, node.code.scope),
+            component: postTemplate,
             context: {
               slug: node.fields.slug,
               prev,

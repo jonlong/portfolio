@@ -1,4 +1,4 @@
-import { css } from 'react-emotion'
+import { css } from '@emotion/core'
 import { modularScale } from 'polished'
 import { mq } from './utils'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Flex } from 'rebass'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { rem } from 'polished'
 import Impetus from '../assets/js/vendor/impetus'
 import imagesLoaded from 'imagesloaded'
@@ -32,6 +32,7 @@ class Gallery extends React.Component {
 
   componentDidMount() {
     const el = this.impetusSource.current
+    console.log({el})
 
     imagesLoaded(el, () => {
       const maxScroll = el.scrollWidth - el.offsetWidth
@@ -60,7 +61,7 @@ class Gallery extends React.Component {
   render() {
     return (
       <ScrollBarClip>
-        <OverflowContainer innerRef={this.impetusSource}>
+        <OverflowContainer ref={this.impetusSource}>
           {this.props.children}
         </OverflowContainer>
       </ScrollBarClip>

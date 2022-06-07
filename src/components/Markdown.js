@@ -1,4 +1,4 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { shevy } from '../styles/settings'
 import { modularScale } from 'polished'
 

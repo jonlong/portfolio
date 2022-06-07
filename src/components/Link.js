@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { css } from 'react-emotion'
+import { css } from '@emotion/core'
 import { Link as GatsbyLink } from 'gatsby'
 import { colors } from '../styles/settings'
 

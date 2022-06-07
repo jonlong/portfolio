@@ -1,4 +1,5 @@
-import styled, { css } from 'react-emotion'
+import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 import { colors, shevy } from '../styles/settings'
 import { mq } from '../styles/utils'
 import { modularScale } from 'polished'

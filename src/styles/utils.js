@@ -1,4 +1,4 @@
-import { css } from 'react-emotion'
+import { css } from '@emotion/core'
 import { breakpoints } from './settings'
 
 export const mq = Object.keys(breakpoints).reduce((accumulator, label) => {

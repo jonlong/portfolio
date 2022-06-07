@@ -1,4 +1,4 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { layout } from '../styles/settings'
 import Column from './Column'
 

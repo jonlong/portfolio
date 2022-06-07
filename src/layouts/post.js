@@ -1,13 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 import BaseLayout from './base'
 import Banner from '../components/Banner'
 import Pagination, { Prev, Next } from '../components/Pagination'
 
 const Post = ({ data, pageContext }) => {
   const { mdx } = data
-  const { frontmatter, code } = mdx
+  const { frontmatter, body } = mdx
   const { prev, next } = pageContext
 
   return (
@@ -18,7 +18,7 @@ const Post = ({ data, pageContext }) => {
         title={frontmatter.title}
       />
 
-      <MDXRenderer>{code.body}</MDXRenderer>
+      <MDXRenderer>{body}</MDXRenderer>
 
       <Pagination>
         {prev && (
@@ -43,9 +43,7 @@ export default Post
 export const pageQuery = graphql`
   query($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
-      code {
-        body
-      }
+      body
       fields {
         slug
       }
