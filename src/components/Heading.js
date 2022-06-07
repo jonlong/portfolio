@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
-import { lighten, modularScale } from 'polished'
+import { lighten, modularScale, rem } from 'polished'
 import { colors, shevy } from '../styles/settings'
 import { mq } from '../styles/utils'
 
@@ -26,15 +26,15 @@ const Post = styled(Base)`
 
 const Title = styled(Base)`
   ${shevy.h3};
-  margin-bottom: .2em;
+  margin-bottom: ${rem('6px')};
 
   ${mq.medium(css`
     ${shevy.h2};
-    margin-bottom: .2em;
+    margin-bottom: ${rem('8px')};
   `)};
   ${mq.large(css`
     ${shevy.h1};
-    margin-bottom: .25em;
+    margin-bottom: ${rem('10px')};
   `)};
 `
 
@@ -52,8 +52,19 @@ const Subtitle = styled(Base)`
 `
 
 const TertiaryTitle = styled(Base)`
-  ${shevy.h5};
+  ${shevy.h6};
   color: ${lighten(0.3, colors.gray[2])};
+  margin-bottom: ${rem('10px')};
+  font-weight: 600;
+`
+
+const SmallCapsTitle = styled(Base)`
+  font-size: ${rem('14px')};
+  font-weight: 600;
+  letter-spacing: ${rem('1px')};
+  text-transform: uppercase;
+  color: ${lighten(0.3, colors.gray[2])};
+  margin-bottom: ${rem('12px')};
 `
 
 const SectionTitle = styled(Base)`
@@ -68,4 +79,4 @@ Base.propTypes = {
   element: PropTypes.string.isRequired
 }
 
-export { Post, Title, Subtitle, TertiaryTitle, SectionTitle }
+export { Post, Title, Subtitle, TertiaryTitle, SmallCapsTitle, SectionTitle }
