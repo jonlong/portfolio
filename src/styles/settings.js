@@ -36,6 +36,8 @@ export const colors = {
   green: '#009f6a',
   blue: '#509afc',
   darkblue: '#3c6496',
+  blush: '#b5504f',
+  purple: '#9d50bb',
   gray: ['#ddd', '#999', '#303336', '#181e2a'],
   background: ['#f2f5f7', '#dce0e5'],
 }
