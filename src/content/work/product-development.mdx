@@ -17,10 +17,10 @@ import { Element as ListItem } from 'components/ListItem'
 import Stack from 'components/Stack'
 import Link from 'components/Link'
 
-import imageStillPlanning from 'assets/images/product/still/planning.jpg'
-import imageStillV1Concept from 'assets/images/product/still/concept-v1.jpg'
-import imageStillV1Menu from 'assets/images/product/still/concept-v1-menu.jpg'
-import videoMP4Interface from 'assets/video/product/v2-demo.mp4'
+import imageStillProductPlanning from 'assets/images/product/still/planning.jpg'
+import imageStillProductV1Concept from 'assets/images/product/still/concept-v1.jpg'
+import imageStillProductV1Menu from 'assets/images/product/still/concept-v1-menu.jpg'
+import videoProductMP4Interface from 'assets/video/product/v2-demo.mp4'
 
 <PostColumn>
 
@@ -58,7 +58,7 @@ The first phase of our product development cycle was centered around clearly def
 
 <Still
   description="Research materials generated during product planning phases"
-  src={imageStillPlanning}
+  src={imageStillProductPlanning}
   alt="Photo: Collage of research conducted during product planning phases"
 />
 
@@ -70,7 +70,7 @@ With this data in hand, we created lo-fidelity prototypes to kickstart a _build-
 
 <Still
   description="Prototype walkthrough of the first product iteration."
-  src={imageStillV1Concept}
+  src={imageStillProductV1Concept}
   alt="Graphic: Outlined functionality of the prototype v1 interface"
 />
 
@@ -84,7 +84,7 @@ Once we were confident that we had a thorough understanding of the problem, the 
 
 <Still
   description="A hi-fidelity mockup of the first product iteration's menubar interface"
-  src={imageStillV1Menu}
+  src={imageStillProductV1Menu}
   alt="Screenshot: Hi-fidelity mockup of the v1 interface"
 />
 
@@ -101,7 +101,7 @@ Following unanimous approval, a small team was assembled and we began building a
     muted
     description="An animated mockup of the second iteration, demoing interactions"
   >
-    <source src={videoMP4Interface} type="video/mp4" />
+    <source src={videoProductMP4Interface} type="video/mp4" />
   </Video>
 </Browser>
 

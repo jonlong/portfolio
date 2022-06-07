@@ -18,24 +18,24 @@ import Link from 'components/Link'
 import { Element as ListItem } from 'components/ListItem'
 import Stack from 'components/Stack'
 
-import imageDesktopHome from 'assets/images/natgeo/desktop/home.jpg'
-import imageDesktopPOD from 'assets/images/natgeo/desktop/pod.jpg'
-import imageDesktopNews from 'assets/images/natgeo/desktop/news.jpg'
-import imageDesktopApple from 'assets/images/natgeo/desktop/apple.jpg'
-import imageDesktopLayoutManager from 'assets/images/natgeo/desktop/layoutmanager.jpg'
-import imageStillJobs from 'assets/images/natgeo/still/jobs.jpg'
+import imageDesktopNGHome from 'assets/images/natgeo/desktop/home.jpg'
+import imageDesktopNGPOD from 'assets/images/natgeo/desktop/pod.jpg'
+import imageDesktopNGNews from 'assets/images/natgeo/desktop/news.jpg'
+import imageDesktopNGApple from 'assets/images/natgeo/desktop/apple.jpg'
+import imageDesktopNGLayoutManager from 'assets/images/natgeo/desktop/layoutmanager.jpg'
+import imageStillNGJobs from 'assets/images/natgeo/still/jobs.jpg'
 
 <Gallery>
   <GalleryItem>
     <Browser description="The National Geographic homepage, seen on the day we launched the new design, in December 2009.">
-      <Still src={imageDesktopHome} alt="Screenshot: The nationalgeographic.com homepage in 2010" />
+      <Still src={imageDesktopNGHome} alt="Screenshot: The nationalgeographic.com homepage in 2010" />
     </Browser>
   </GalleryItem>
 
 <GalleryItem>
   <Still
     description="Steve Jobs demos nationalgeographic.com onstage during the iPad keynote presentation."
-    src={imageStillJobs}
+    src={imageStillNGJobs}
     alt="Photo: Steve Jobs visits nationalgeographic.com during the iPad keynote presentation"
   />
 </GalleryItem>
@@ -43,7 +43,7 @@ import imageStillJobs from 'assets/images/natgeo/still/jobs.jpg'
 <GalleryItem>
   <Browser>
     <Still
-      src={imageDesktopPOD}
+      src={imageDesktopNGPOD}
       alt="Screenshot: A Photo of the Day page in 2010 "
     />
   </Browser>
@@ -53,7 +53,7 @@ import imageStillJobs from 'assets/images/natgeo/still/jobs.jpg'
   <Browser>
     <Still
       description="Featured on apple.com's iPad product page."
-      src={imageDesktopApple}
+      src={imageDesktopNGApple}
       alt="Screenshot: The nationalgeographic.com homepage featured on apple.com's iPad page"
     />
   </Browser>
@@ -62,7 +62,7 @@ import imageStillJobs from 'assets/images/natgeo/still/jobs.jpg'
   <GalleryItem>
     <Browser>
       <Still
-        src={imageDesktopNews}
+        src={imageDesktopNGNews}
         alt="Screenshot: A News page in 2010" />
     </Browser>
   </GalleryItem>
@@ -100,7 +100,7 @@ Leveraging the power of Django's template inheritance model and Nicole Sullivan'
 
 <Browser description="A custom layout system I created for the site's content producers. This helped them keep pages tight and visually consistent while still ensuring a high level of customization.">
   <Still
-    src={imageDesktopLayoutManager}
+    src={imageDesktopNGLayoutManager}
     alt="Screenshot: A view of the custom layout manager powering the nationalgeographic.com homepage in 2010"
   />
 </Browser>

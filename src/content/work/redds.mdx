@@ -19,21 +19,21 @@ import List from 'components/List'
 import { Element as ListItem } from 'components/ListItem'
 import Stack from 'components/Stack'
 
-import imageDesktopInterface from 'assets/images/redds/desktop/interface.jpg'
-import imageStillBTS2 from 'assets/images/redds/still/bts2.jpg'
-import imageStillSystemDiagram from 'assets/images/redds/still/system-diagram.gif'
-import imageStillUserFlow from 'assets/images/redds/still/user-flow.gif'
-import videoMP4Interface from 'assets/video/redds/interface.mp4'
-import videoWebmInterface from 'assets/video/redds/interface.webm'
-import videoMP4Trailer from 'assets/video/redds/trailer.mp4'
-import videoStillTrailer from 'assets/video/redds/trailer.jpg'
+import imageDesktopReddsInterface from 'assets/images/redds/desktop/interface.jpg'
+import imageStillReddsBTS2 from 'assets/images/redds/still/bts2.jpg'
+import imageStillReddsSystemDiagram from 'assets/images/redds/still/system-diagram.gif'
+import imageStillReddsUserFlow from 'assets/images/redds/still/user-flow.gif'
+import videoReddsMP4Interface from 'assets/video/redds/interface.mp4'
+import videoReddsWebmInterface from 'assets/video/redds/interface.webm'
+import videoReddsMP4Trailer from 'assets/video/redds/trailer.mp4'
+import videoReddsStillTrailer from 'assets/video/redds/trailer.jpg'
 
 <Gallery>
   <GalleryItem>
     <Browser>
       <Still
         description="The in-browser game interface, where users can fire a live-streamed cannon in real time."
-        src={imageDesktopInterface}
+        src={imageDesktopReddsInterface}
         alt="Screenshot: The Redd's Launcher Game Interface" />
     </Browser>
   </GalleryItem>
@@ -45,20 +45,20 @@ import videoStillTrailer from 'assets/video/redds/trailer.jpg'
     muted
     description="Players answered trivia questions for a chance to control the launcher, and then used the keyboard to position and lock in shots."
   >
-    <source src={videoMP4Interface} type="video/mp4" />
-    <source src={videoWebmInterface} type="video/webm" />
+    <source src={videoReddsMP4Interface} type="video/mp4" />
+    <source src={videoReddsWebmInterface} type="video/webm" />
   </Video>
 </GalleryItem>
 
 <GalleryItem>
-  <Video controls poster={videoStillTrailer}>
-    <source src={videoMP4Trailer} type="video/mp4" />
+  <Video controls poster={videoReddsStillTrailer}>
+    <source src={videoReddsMP4Trailer} type="video/mp4" />
   </Video>
 </GalleryItem>
 
   <GalleryItem>
     <Still
-      src={imageStillBTS2}
+      src={imageStillReddsBTS2}
       description="Behind the scenes on the Redd's Apple Launcher set."
       alt="Photo: Behind the scenes on the Redd's Apple Launcher set" />
   </GalleryItem>
@@ -112,7 +112,7 @@ With time bearing down we couldn't afford a full refactor of the game mechanics,
 </Markdown>
 
 <Still
-  src={imageStillUserFlow}
+  src={imageStillReddsUserFlow}
   alt="Diagram: Outline of the Redd's Web User Flow"
   description="A technical outline of the user flow for the web interface, divided into Player vs. Visitor flows."
 />
@@ -128,7 +128,7 @@ Recognizing this as an opportunity to improve our own server provisioning proces
 </Markdown>
 
 <Still
-  src={imageStillSystemDiagram}
+  src={imageStillReddsSystemDiagram}
   description="A system diagram for the Redd's tech stack, detailing how each component communicates with one another"
   alt="Diagram: System Diagram outlining the Redd's Technical Flow."
 />

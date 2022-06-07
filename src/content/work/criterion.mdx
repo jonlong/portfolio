@@ -21,51 +21,51 @@ import { Element as ListItem } from 'components/ListItem'
 import Stack from 'components/Stack'
 import Link from 'components/Link'
 
-import imageDesktopHome from 'assets/images/criterion/desktop/home.jpg'
-import imageDesktopFilm from 'assets/images/criterion/desktop/film.jpg'
-import imageDesktopCollection from 'assets/images/criterion/desktop/collection.jpg'
-import imageDesktopFlashSale from 'assets/images/criterion/desktop/flash-sale.jpg'
-import imageMobileHome from 'assets/images/criterion/mobile/home.jpg'
-import imageMobileArticle from 'assets/images/criterion/mobile/article.jpg'
-import videoMP4Slideshow from 'assets/video/criterion/slideshow.mp4'
+import imageDesktopCriterionHome from 'assets/images/criterion/desktop/home.jpg'
+import imageDesktopCriterionFilm from 'assets/images/criterion/desktop/film.jpg'
+import imageDesktopCriterionCollection from 'assets/images/criterion/desktop/collection.jpg'
+import imageDesktopCriterionFlashSale from 'assets/images/criterion/desktop/flash-sale.jpg'
+import imageMobileCriterionHome from 'assets/images/criterion/mobile/home.jpg'
+import imageMobileCriterionArticle from 'assets/images/criterion/mobile/article.jpg'
+import videoCriterionMP4Slideshow from 'assets/video/criterion/slideshow.mp4'
 
 <Gallery>
   <GalleryItem>
     <Browser>
-      <Still src={imageDesktopHome} alt="Screenshot: Desktop Home Page"  />
+      <Still src={imageDesktopCriterionHome} alt="Screenshot: Desktop Home Page"  />
     </Browser>
   </GalleryItem>
 
 <GalleryItem>
   <Device>
-    <img src={imageMobileHome} alt="Screenshot: Mobile Home Page" />
+    <img src={imageMobileCriterionHome} alt="Screenshot: Mobile Home Page" />
   </Device>
 </GalleryItem>
 
 <GalleryItem>
   <Browser>
-    <Still src={imageDesktopFilm} alt="Screenshot: Desktop Film Page" />
+    <Still src={imageDesktopCriterionFilm} alt="Screenshot: Desktop Film Page" />
   </Browser>
 </GalleryItem>
 
 <GalleryItem>
   <Browser>
     <Video autoPlay loop muted>
-      <source src={videoMP4Slideshow} type="video/mp4" />
+      <source src={videoCriterionMP4Slideshow} type="video/mp4" />
     </Video>
   </Browser>
 </GalleryItem>
 
 <GalleryItem>
   <Device>
-    <img src={imageMobileArticle} alt="Screenshot: Mobile Article Page" />
+    <img src={imageMobileCriterionArticle} alt="Screenshot: Mobile Article Page" />
   </Device>
 </GalleryItem>
 
 <GalleryItem>
   <Browser>
     <Still
-      src={imageDesktopCollection}
+      src={imageDesktopCriterionCollection}
       alt="Screenshot: Desktop Collection Page"
     />
   </Browser>
@@ -120,7 +120,7 @@ My largest responsibilities revolved around the following areas:
 
 <Browser description="A partial view of Criterion's Flash Sale page. This event is held twice a year and drives huge bursts of traffic to the site for 24 hours at a time.">
   <Still
-    src={imageDesktopFlashSale}
+    src={imageDesktopCriterionFlashSale}
     alt="Screenshot: 24-Hour Flash Sale page"
   />
 </Browser>
