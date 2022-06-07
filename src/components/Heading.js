@@ -26,12 +26,15 @@ const Post = styled(Base)`
 
 const Title = styled(Base)`
   ${shevy.h3};
+  margin-bottom: .2em;
 
   ${mq.medium(css`
     ${shevy.h2};
+    margin-bottom: .2em;
   `)};
   ${mq.large(css`
     ${shevy.h1};
+    margin-bottom: .25em;
   `)};
 `
 
