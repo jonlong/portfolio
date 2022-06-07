@@ -1,6 +1,6 @@
 module.exports = {
   site: {
-    title: 'Portfolio',
+    title: 'Jon Long — Portfolio',
   },
   routes: {
     work: '/work',
