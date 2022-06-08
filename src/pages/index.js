@@ -45,7 +45,7 @@ const IndexPage = () => (
       <Section>
         <Title element="h1">Jon Long</Title>
         <Subhead>
-          <Subtitle element="p">UI Developer and Tech Lead</Subtitle>
+          <Subtitle element="p">Design Engineer and Tech Lead</Subtitle>
         </Subhead>
       </Section>
 
