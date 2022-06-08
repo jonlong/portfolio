@@ -102,19 +102,25 @@ import videoCriterionMP4Slideshow from 'assets/video/criterion/slideshow.mp4'
 
 Between 2017 and 2018, I worked as a full stack developer helping to launch and maintain the first redesign of <Link to="https://criterion.com">criterion.com</Link> in over a decade.
 
-I was part of a small team contracted to pick up where a prior agency had left off, and inherited a beautifully-designed set of static front end templates and a partially completed back end build.
+As part of a small team hired to pick up the work left by a departing agency, we inherited a set of static front end templates and a partially-completed Laravel CMS designed to accommodate a custom publishing workflow.
 
-We were hired to figure out what remained, create a transparent project management workflow that would shepherd the team through the process, and complete the outstanding development required for launch. After the site launched in May 2018, we continued to build and release new features.
+Our task was to determine how much work remained, complete the outstanding development required for launch, and most importantly, to create a transparent project management approach that would re-establish the client's trust and shepherd them through the process.
 
 ## My Role
 
-My largest responsibilities revolved around the following areas:
+Working in a small team with a lot of scope to tackle, I had a wide set of responsibilities that spanned the entire stack:
 
-- Interviewing the Criterion team to get a solid understanding of each department's workflows, gathering requirements and creating scopes for major features that hadn't shipped yet, and aligning expectations with stakeholders
-- Working with the previous development team to understand the project's architecture, technical decisions, and outstanding tasks
-- Planning and configuring our team's development workflow / deployment pipeline
-- Planning and executing a migration of the existing site's database content to the new site's updated structure
-- Shipping major features including homepage CMS integration, high-traffic Flash Sale pages, order editing and cancellation, CSV reporting, URL migrations, and a whole bunch of front end bug fixes and enhancements.
+- Planning and configuring the app's CI/CD and review pipelines
+- Planning and performing a content migration from the old site to our new system
+- Interviewing the Criterion team to understand each department's content and editorial workflows and gather requirements for outstanding features
+- Knowledge transfer with the previous development team to understand the project's architecture, technical decisions, and tech debt
+- Shipping major features including
+  - homepage (CMS integration)
+  - high-traffic Flash Sale pages (front-end and CMS integration)
+  - order editing and cancellation for both users and admins (front end and backend)
+  - CSV reporting
+  - URL migrations
+  - a whole bunch of front end bug fixes and enhancements
 
 </Markdown>
 
@@ -131,24 +137,24 @@ My largest responsibilities revolved around the following areas:
 
 The heart of this project was the team's effort to radically improve the development process, transparency, and communication with the client stakeholders, something that was especially crucial given our role as the second development team to join the project.
 
-Scoping a project in motion is tricky. There's so much existing background, so many foundational decisions already made, and so much context that we can only understand as work progresses. In order to create accurate scopes, we'd need a system that allowed us to chart how much work we could complete in a given time period, identify and break up outstanding features into actionable tasks, and plan for the unexpected along the way.
+With so many foundational decisions having been made before our involvement, and so much context established between the client and the previous team, scoping this project was a challenge.
 
-An agile approach checked all these boxes, and also gave us the opportunity to include the Criterion team at a much closer level. The system hasn't changed much since we began: we employ weekly scrum planning, post-sprint demos, kanban-style issue tracking, and commitment to regular backlog grooming sessions with the Criterion team.
+Introducing an agile approach with regular sprint ceremonies and demos allowed us involve the Criterion team in a way that kept them completely informed of project status by making them full partners in the process:
 
-We support this from a development standpoint using a Git Flow approach paired with Heroku's (brilliant) Review Apps feature, allowing us to stand up live builds of every Pull Request for the Criterion team to review. Once they validate a set of acceptance criteria, each branch is staged for inclusion in a post-sprint release.
+- Features, chores, and bugs were solidified and prioritized during backlog grooming sessions with stakeholders
+- Pull Requests were automatically deployed as Heroku Review Apps, allowing the client to validate each feature against a set of acceptance criteria.
+- Accepted features were staged for inclusion in a release candidate, which was demoed and deployed at the end of each sprint with client sign-off.
 
-Without a strong project management process, creating a window into the team's progress and developing a shared understanding of this project's scope would be impossible. An agile approach, coupled with a high degree of sprint visibility and direct collaboration from the stakeholders, has been critical in collectively defining and understanding a shared vision of success.
+## Results
 
-## Lessons
+I was incredibly lucky to work alongside the exceptional people at Criterion, who are as smart and lovely a group of people as you could hope. They remained enthusastic and focused partners throughout the project and consistently validated the power of regularly involving stakeholders in the development process.
 
-I am incredibly lucky to work alongside this team and the exceptional people at Criterion, who have been enthusastic and focused partners throughout this project. They have consistently shown me the dividends of including regular client feedback as a fundamental part of the development process.
+As a result, we shared many wins together:
 
-Some of the big wins we've shared as a result:
-
-- No more big surprises. If the team runs into a particularly hairy issue or an increase in scope, our sprint planning board acts as a shared playbook that shows us how to proceed. Since they're directly involved in the planning process, the client stays informed and keeps a handle on how changes affect the project as a whole.
-- Scope discussions are easier. We can track exactly how much work is possible within a given sprint, and plan our weeks around that metric. As priorities shift, we have to work together to determine which tasks get bumped to subsequent sprints, and which features might need to be deprioritized in order to meet a deadline.
-- The client is able to plan external business decisions around the pace of development, since we now have a quantifiable view of effort and velocity.
-- Finally, the process is hardly something that runs itself. Strong project management is required to keep everyone on track, because commitment and consistency is what ultimately makes this approach effective and reliable.
+- **No more big surprises.** If the team ran into a particularly difficult issue or an increase in scope, our sprint planning board was a shared playbook that clarified the decisions we'd need to make to accommodate. Regular sprint ceremonies kept the client informed of how changed would affect the project as a whole, and gave them opportunities to weigh in.
+- **Scope discussions got easier.** As the engagement progressed, the accuracy with which we could track and estimate our work improved, and we established the baseline velocity we'd use to plan future sprints. As priorities shifted, the client could visualize how changes affected our timeline, and found themselves well-equipped to help determine how the work would shift accordingly.
+- **Deadlines were based on data.** The Criterion team was able to plan business decisions around the pace of development, based on a quantifiable view of effort and velocity.
+- **Mutual trust elevated the whole team.** A strong project management approach that enabled high visibility and rewarded commitment and consistency allowed the team to operate from a place of mutual trust and respect first. Feature discovery, scope negotiation, and navigating unexpected challenges became much easier, and resulted in a shared sense of confidence and pride in the final product.
 
 </Markdown>
 
