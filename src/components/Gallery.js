@@ -32,7 +32,6 @@ class Gallery extends React.Component {
 
   componentDidMount() {
     const el = this.impetusSource.current
-    console.log({el})
 
     imagesLoaded(el, () => {
       const maxScroll = el.scrollWidth - el.offsetWidth
