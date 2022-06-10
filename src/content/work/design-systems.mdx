@@ -22,17 +22,71 @@ import Link from 'components/Link'
 
 import imageDesktopDSRoxborough from 'assets/images/design-systems/desktop/roxborough.jpg'
 import imageDesktopDSGreenProgram from 'assets/images/design-systems/desktop/greenprogram.jpg'
+import imageDesktopDSPromptworks from 'assets/images/design-systems/desktop/promptworks.jpg'
+import imageDesktopDSSCTE from 'assets/images/design-systems/desktop/scte.jpg'
 import videoDSMP4Integrity from 'assets/video/design-systems/integrity-small.mp4'
+import videoDSMP4StackupUI from 'assets/video/design-systems/stackup-ui.mp4'
 
 <PostColumn theme={_frontmatter.background}>
 
 <Markdown>
 
-## Standalone Library
+I've been excited to see the steady adoption of design systems over the last few years, and especially heartened by the emergence of <Link to="https://www.designbetter.co/design-engineering-handbook">_design engineering_</Link> as a crucial role in many organizations.
 
+Below are a few examples of design systems I have implemented in the form of component libraries and living styleguides, all of which have paid tremendous dividends in development time, UI resiliency, and developer empowerment.
+
+## Stackup UI
 </Markdown>
 
-<Stack theme={_frontmatter.background}>
+<Stack collapse={true} theme={_frontmatter.background}>
+  <List>
+    <ListItem>
+      <p>React, MDX</p>
+    </ListItem>
+    <ListItem>
+      <p>Tailwind, Sass, JavaScript, Webpack</p>
+    </ListItem>
+  </List>
+</Stack>
+
+<Browser>
+  <Video autoPlay loop muted>
+    <source src={videoDSMP4StackupUI} type="video/mp4" />
+  </Video>
+</Browser>
+
+<Markdown>
+
+<p><Link to="https://stackup-ui.promptworks.com/">Stackup UI</Link> is an internal design system created at <Link to="https://promptworks.com">Promptworks</Link>, aimed at helping engineers build web and mobile apps with consistent, accessible, and resilient UI.</p>
+
+This project was the result of a collaboration between myself and two colleagues: a design/ux lead and an engineer responsible for the company's internal scaffolding tool (Stackup).
+
+### The problem
+
+While every engineer at Promptworks specializes in certain disciplines, they all contribute at a full-stack level on each project, building and shipping features from end-to-end.
+
+A common refrain often expressed by teammates during retrospective meetings was:
+
+>"I want to build responsible and beautiful UI, but I don't know the best way to do it."
+
+One of the wonderful things about the Promptworks team is a shared desire to "do it right", and my colleagues identified a point of friction between that goal and the reality of shipping timely, cost-effective work for our clients.
+
+At the time, Jeremy Keith and the Clearleft team's writing about establishing a <Link to="https://clearleft.com/posts/design-systems">_gestalt_</Link> was really resonating with me, and I proposed the idea of creating a shared design system with the following goals:
+- A library of common UI elements with consistent markup, flexible styling, and built-in accessibility baselines
+- Documentation for complex elements, identifying various design recommendations and outlining the team's rationale
+- Cues and examples of accessibility considerations for specific UI patterns
+- A project showcase documenting extended components created with Stackup UI
+
+Fast forward a few years and the three of us have successfully compiled a beautiful set of tested, documented components and introduced a client-side development style that is employed for almost every one of the company's greenfield projects since 2020.
+
+These days, our colleagues are routinely shipping consistent, high-quality UI work, and complete end-to-end features without intervention. Staffing changes on projects are more easily managed now that we have a shared approach, and we're receiving regular feedback that the system is helping to demystify UI from engineers specializing in backend development.
+
+Value for our clients has dramatically increased as well, since we're able to avoid rebuilding the same set of standard components from scratch for every engagement, and invest much more time in getting the details right.
+
+## Component Libraries
+</Markdown>
+
+<Stack collapse={true} theme={_frontmatter.background}>
   <List>
     <ListItem>
       <p>
@@ -40,7 +94,7 @@ import videoDSMP4Integrity from 'assets/video/design-systems/integrity-small.mp4
       </p>
     </ListItem>
     <ListItem>
-      <p>Sass, ES6 JavaScript, compiled with Babel and Webpack</p>
+      <p>Sass, JavaScript, Webpack</p>
     </ListItem>
     <ListItem>
       <p>Nunjucks templating library</p>
@@ -56,11 +110,11 @@ import videoDSMP4Integrity from 'assets/video/design-systems/integrity-small.mp4
 
 <Markdown>
 
-I've been excited to see the rise of component libraries and styleguides in web app development over the last few years, and have especially started to see their dividends in recent projects requiring design systems as deliverables.
+Whenever possible, I've found component libraries to be an ideal deliverable for a client with in-house resources or a long-term maintenance plan.
 
-I built the components above with the <Link to="https://fractal.build">Fractal</Link> library, which created an incredibly smooth and consistent QA experience for both myself and the design team. I was able to develop and test each of the components in isolation first, and then pass the interactive versions to the designers for a more focused review. Building this way also encouraged a taking more modular approach from the start, and each component was created using Nunjucks template partials, BEM naming conventions, and ES6 modules.
+I built the example above with the <Link to="https://fractal.build">Fractal</Link> library, which created an incredibly smooth and consistent QA experience for both myself and the client's design team.
 
-I've found this approach so productive and valuable that I've adopted it as a standard step in my own site design and development.
+I was able to develop and test each of the components in isolation first, and then pass the interactive versions to the designers for a more focused review. This project also demonstrated that a design system approach is just as effective with static templating engines as it is with more complex frameworks like Vue and React. Each component above was created using Nunjucks template partials, BEM naming conventions, and ES6 modules.
 
 </Markdown>
 
@@ -68,9 +122,50 @@ I've found this approach so productive and valuable that I've adopted it as a st
 
 ## Styleguides
 
+For sites featuring less interactivity and relatively static design elements, living styleguides are a nice middle ground. The examples below are taken from various projects ranging from 2017 to 2021, and were the first things I built for each.
+
 </Markdown>
 
-<Stack theme={_frontmatter.background}>
+<Stack padding={true} collapse={true} theme={_frontmatter.background}>
+  <List>
+    <ListItem>
+      <p>Gatsby (React)</p>
+    </ListItem>
+    <ListItem>
+      <p>Tailwind, Container Queries</p>
+    </ListItem>
+  </List>
+</Stack>
+
+<Browser collapse={true} description="Living styleguide created for Promptworks">
+  <Still
+    src={imageDesktopDSPromptworks}
+    alt="Screenshot: A living styleguide for Promptworks"
+  />
+</Browser>
+
+<Stack collapse={true} theme={_frontmatter.background}>
+  <List>
+    <ListItem>
+      <p>Jinja (Python)</p>
+    </ListItem>
+    <ListItem>
+      <p>Stackup UI (BEM CSS), Tailwind</p>
+    </ListItem>
+    <ListItem>
+      <p>Vanilla JS and <Link to="https://stimulus.hotwired.dev/">Stimulus</Link></p>
+    </ListItem>
+  </List>
+</Stack>
+
+<Browser description="Living styleguide created for SCTE">
+  <Still
+    src={imageDesktopDSSCTE}
+    alt="Screenshot: A living styleguide for SCTE"
+  />
+</Browser>
+
+<Stack collapse={true} theme={_frontmatter.background}>
   <List>
     <ListItem>
       <p>
@@ -86,22 +181,14 @@ I've found this approach so productive and valuable that I've adopted it as a st
   </List>
 </Stack>
 
-<Markdown>
-
-For sites with less complex components and more static design elements, living styleguides are a nice middle ground. The examples below are taken from two recent projects, and were the first things I built for each.
-
-Once these libraries were complete, full templates were assembled Bootstrap-style, using the markup patterns in the styleguide.
-
-</Markdown>
-
-<Browser description="A responsive, living styleguide created for Roxborough, Philadelphia">
+<Browser description="Living styleguide created for Roxborough, Philadelphia">
   <Still
     src={imageDesktopDSRoxborough}
     alt="Screenshot: A living styleguide for Roxborough, Philadelphia"
   />
 </Browser>
 
-<Browser description="A responsive, living styleguide created for The Green Program">
+<Browser description="Living styleguide created for The Green Program">
   <Still
     src={imageDesktopDSGreenProgram}
     alt="Screenshot: A living styleguide for The Green Program"

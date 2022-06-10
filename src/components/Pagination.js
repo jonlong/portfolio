@@ -11,7 +11,6 @@ import PostColumn from './PostColumn'
 
 const Pager = styled(Link)`
   font-weight: ${fontWeights.bold};
-  color: white;
   padding: ${modularScale(-3)} ${modularScale(-1)};
   border-radius: ${modularScale(-4)};
   text-decoration: none;
@@ -19,6 +18,11 @@ const Pager = styled(Link)`
   width: 100%;
   margin-bottom: ${modularScale(1)};
   text-align: center;
+  color: white;
+
+  &:visited {
+    color: white;
+  }
 
   ${mq.pagination(css`
     width: auto;

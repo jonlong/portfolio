@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { shevy } from '../styles/settings'
+import { rem } from 'polished'
 import { modularScale } from 'polished'
 import { colors } from '../styles/settings'
 
@@ -25,7 +26,8 @@ const Markdown = styled('div')`
   }
 
   p,
-  li {
+  li,
+  blockquote {
     ${shevy.content};
   }
 
@@ -53,6 +55,16 @@ const Markdown = styled('div')`
         color: ${colors.gray[1]}
         content: "►";
       }
+    }
+  }
+
+  blockquote {
+    border-left: ${rem(5)} solid ${colors.darkblue};
+    padding-left: ${modularScale(0)};
+
+    p {
+      color: ${colors.darkblue};
+      font-style: italic;
     }
   }
 `

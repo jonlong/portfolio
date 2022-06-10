@@ -7,7 +7,8 @@ import { TertiaryTitle, SmallCapsTitle } from './Heading'
 
 const Container = styled('div')`
   max-width: ${layout.textLength};
-  margin-bottom: ${modularScale(3)};
+  margin-bottom: ${props => props.collapse ? 0 : modularScale(3)};
+  margin-top: ${props => props.padding ? modularScale(3) : 0};
   font-size: 0.8rem;
   background: ${props =>
     props.theme ? lighten(0.43, colors[props.theme]) : colors.gray[0]};
@@ -18,7 +19,8 @@ const Container = styled('div')`
   padding: ${modularScale(1)};
 
   ${TertiaryTitle} {
-    color: ${props => (props.theme ? darken(0.2, colors[props.theme]) : 'inherit')};
+    color: ${props =>
+      props.theme ? darken(0.2, colors[props.theme]) : 'inherit'};
     margin-top: ${modularScale(2)};
   }
 
@@ -27,7 +29,8 @@ const Container = styled('div')`
     margin-bottom: ${rem('10px')};
     margin-right: ${rem('5px')};
     margin-left: ${rem('13px')};
-    color: ${props => (props.theme ? darken(0.35, colors[props.theme]) : 'inherit')};
+    color: ${props =>
+      props.theme ? darken(0.35, colors[props.theme]) : 'inherit'};
 
     a {
       color: ${props =>
@@ -42,12 +45,13 @@ const Container = styled('div')`
 
   ${SmallCapsTitle} {
     margin-right: ${modularScale(0)};
-    color: ${props => (props.theme ? darken(0.2, colors[props.theme]) : 'inherit')};
+    color: ${props =>
+      props.theme ? darken(0.2, colors[props.theme]) : 'inherit'};
   }
 `
 
-const Stack = ({ children, theme = false }) => (
-  <Container theme={theme}>
+const Stack = ({ children, padding = false, collapse = false, theme = false }) => (
+  <Container padding={padding} collapse={collapse} theme={theme}>
     <SmallCapsTitle element="h2" theme={theme}>Stack</SmallCapsTitle>
     {children}
   </Container>

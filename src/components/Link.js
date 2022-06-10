@@ -1,16 +1,16 @@
+/** @jsx jsx */
 import React from 'react'
 import PropTypes from 'prop-types'
 import { css } from '@emotion/core'
+import { jsx } from '@emotion/react'
 import { Link as GatsbyLink } from 'gatsby'
 import { colors } from '../styles/settings'
 
 const styles = css`
   color: ${colors.blue};
-  text-decoration: none;
 
   &:visited {
     color: ${colors.darkblue};
-    text-decoration: none;
   }
 `
 
@@ -20,14 +20,14 @@ const Link = ({ children, to, ...other }) => {
 
   if (external) {
     return (
-      <a className={styles} href={to} {...other}>
+      <a css={styles} href={to} {...other}>
         {children}
       </a>
     )
   }
 
   return (
-    <GatsbyLink className={styles} to={to} {...other}>
+    <GatsbyLink css={styles} to={to} {...other}>
       {children}
     </GatsbyLink>
   )
@@ -35,7 +35,7 @@ const Link = ({ children, to, ...other }) => {
 
 Link.propTypes = {
   children: PropTypes.node.isRequired,
-  to: PropTypes.string.isRequired
+  to: PropTypes.string.isRequired,
 }
 
 export default Link

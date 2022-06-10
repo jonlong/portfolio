@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
+import { modularScale } from 'polished'
 import { colors } from '../styles/settings'
 import inlineImage from '../styles/inlineImage'
 import { lighten, rem } from 'polished'
@@ -9,6 +10,7 @@ import { Element as Still } from './Still'
 import { Element as Video } from './Video'
 import Description from './Description'
 import PostColumn from './PostColumn'
+import Markdown from './Markdown'
 
 const Control = styled('span')`
   height: 12px;
