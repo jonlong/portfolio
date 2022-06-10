@@ -50,6 +50,7 @@ const Markdown = styled('div')`
     li {
       margin-bottom: 0;
       margin-top: ${modularScale(0)};
+      margin-left: ${modularScale(2)};
 
       &::marker {
         color: ${colors.gray[1]}
